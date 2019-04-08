@@ -1,0 +1,35 @@
+baseURL      = "https://milad.dev"
+languageCode = "en-us"
+title        = "Milad Irannejad"
+theme        = "hermit"
+
+[author]
+  name = "Milad Irannejad"
+
+[params]
+  homeSubtitle = "Writing about tech and dev"
+
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/moorara"
+
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/moorara"
+
+[menu]
+
+  [[menu.main]]
+    name   = "Posts"
+    url    = "posts/"
+    weight = 10
+
+  [[menu.main]]
+    name   = "About"
+    url    = "about-me"
+    weight = 20
