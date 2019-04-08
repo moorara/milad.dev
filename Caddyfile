@@ -1,0 +1,10 @@
+localhost:8080/health {
+  status 200 /
+}
+
+localhost:8080 {
+  root /www/public
+  gzip
+
+  log / stdout "\{\"timestamp\":\"{when_iso}\", \"host\":\"{host}\", \"req.method\":\"{method}\", \"req.endpoint\":\"{uri}\", \"res.statusCode\":\"{status}\", \"res.size\":\"{size}\", \"responseTime\":\"{latency_ms}\", \"message\":\"{proto} {scheme} {method} {uri}\"\}"
+}
