@@ -1,0 +1,3 @@
+# Redirect default Netlify subdomain to primary domain.
+# These rules will change if you change your site’s custom domains or HTTPS settings.
+https://milad-dev.netlify.com/* https://milad.dev/:splat 301!
