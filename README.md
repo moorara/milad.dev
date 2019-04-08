@@ -1,3 +1,5 @@
+[![Build Status][netlify-image]][netlify-url]
+
 # milad.dev
 
 This is a [Hugo](https://gohugo.io) site for my personal tech and dev blog.
@@ -52,3 +54,7 @@ If you add a **non-www subdomain**, then you only need to add one record to your
   - https://www.netlify.com/docs/redirects
   - https://www.netlify.com/docs/functions
   - https://www.netlify.com/blog/2017/02/28/to-www-or-not-www
+
+
+[netlify-url]: https://app.netlify.com/sites/milad-dev/deploys
+[netlify-image]: https://api.netlify.com/api/v1/badges/0f187c64-3e52-4927-9cb0-d210bdc9368a/deploy-status
