@@ -42,3 +42,8 @@
 #   from = "/*"
 #   to = "/index.html"
 #   status = 200
+
+[[redirects]]
+  from = "https://milad-dev.netlify.com/*"
+  to = "https://milad.dev/:splat"
+  status = 301
