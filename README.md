@@ -36,16 +36,16 @@ For an in-depth explanation of these options, you can read this [guide](https://
 
 #### Using Custom DNS Provider
 
+If you add a **root domain** and a **www domain**, you need to add two records to your DNS provider.
+If you add a **non-www subdomain**, then you only need to add one record to your DNS provider.
+
   * For **non-www subdomain**:
     - Add a **CNAME** record pointing to Netlify site.
   * For **root domain** and **www subdomain**:
     - Add a **CNAME** record for **www subdomain** pointing to Netlify site.
     - For **root domain**:
-       - If your DNS provider supports *CNAME flattening*, *ANAME* or *ALIAS* records, add a **CNAME** record pointing to Netlify site.
+       - If your DNS provider supports **CNAME flattening**, **ANAME** or **ALIAS** records, add such a record pointing to Netlify site.
        - If your DNS provider does not support any of *CNAME flattening*, *ANAME* or *ALIAS* records, add an **A record** pointing to Netlify load balancer IP address (`104.198.14.52`).
-
-If you add a **root domain** and/or a **www domain**, you need to add two records to your DNS provider.
-If you add a **non-www subdomain**, then you only need to add one record to your DNS provider.
 
 ### Guides
 
