@@ -30,6 +30,16 @@ theme        = "hermit"
     weight = 10
 
   [[menu.main]]
+    name   = "Gists"
+    url    = "gists/"
+    weight = 20
+
+  [[menu.main]]
+    name   = "Projects"
+    url    = "projects/"
+    weight = 30
+
+  [[menu.main]]
     name   = "About"
     url    = "about-me"
-    weight = 20
+    weight = 40
