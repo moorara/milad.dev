@@ -1,7 +1,9 @@
 ---
 title: "Our Software Dependency Problem"
 date: 2019-04-27T03:11:51-04:00
-tags: 
+draft: false
+toc: false
+tags:
   - software
   - dependency
 ---

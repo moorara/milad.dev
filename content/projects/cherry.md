@@ -3,7 +3,7 @@ title: "Cherry: Build And Release!"
 date: 2019-04-27T04:44:44-04:00
 draft: false
 toc: true
-tags: 
+tags:
   - cherry
   - devops
   - golang

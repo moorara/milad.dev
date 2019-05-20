@@ -3,7 +3,8 @@ title: "Zero-Config Configuration Management"
 date: 2019-04-27T03:33:33-04:00
 draft: false
 toc: true
-tags: 
+tags:
+  - dry
   - config
   - golang
   - microservices
