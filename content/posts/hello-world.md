@@ -2,7 +2,7 @@
 title: "Hello World"
 date: 2019-04-07T21:58:44-04:00
 toc: false
-tags: 
+tags:
   - hugo
 ---
 

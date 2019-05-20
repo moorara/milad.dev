@@ -3,7 +3,7 @@ title: "An Overview of Graphql"
 date: 2019-04-30T23:01:17-04:00
 draft: false
 toc: true
-tags: 
+tags:
   - api
   - graphql
   - microservices
