@@ -1,11 +1,11 @@
 ---
 title: "An Overview of Graphql"
 date: 2019-04-30T23:01:17-04:00
-draft: falseg
+draft: false
 toc: true
 tags: 
-  - graphql
   - api
+  - graphql
   - microservices
   - backend
   - frontend
