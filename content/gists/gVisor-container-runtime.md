@@ -1,7 +1,7 @@
 ---
 title: "gVisor: Building and Battle Testing a Userspace OS in Go"
 date: 2019-05-19T15:14:56-04:00
-draft: true
+draft: false
 toc: false
 tags:
   - os
