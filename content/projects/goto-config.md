@@ -13,7 +13,7 @@ tags:
 
 [**goto/config**](https://github.com/moorara/goto/tree/master/config) is a _configuration management_ library for [Go](https://golang.org) applications.
 I built this library as a response to repeating myself across every single microservice I have been working on.
-This library has been used in production both in my past and current jobs for more than year.
+This library has been used in production both in my past and current jobs for more than a year.
 
 goto/config is based on [The Twelve-Factor App](https://12factor.net/config).
 It is a very minimal and lightweight library for reading configuration values either from _command-line arguments_, _environment variables_, or _files_.
