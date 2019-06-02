@@ -1,24 +1,29 @@
 ---
 title: "A Comparison of GitHub Marketplace Apps"
-date: 2019-06-01T11:13:06-04:00
-draft: true
+date: 2019-06-02T11:13:06-04:00
+draft: false
 toc: true
 images:
-tags: 
+tags:
+  - dev
+  - coding
   - github
   - automation
+  - monitoring
+  - microservices
   - continuous-integration
   - continuous-delivery
+  - code-coverage
+  - code-testing
   - documentation
-  - microservices
 ---
 
-I have been using and evaluating a dozens of [GitHub Marketplace Apps](https://github.com/marketplace) for few months now
+I have been using and evaluating dozens of [GitHub Marketplace Apps](https://github.com/marketplace) for a few months now
 for a real-world microservices application built in [Go](https://golang.org).
-So, I decided to share my experience!
+So, I decided to share what I liked and what I didn't like about these integrations.
 
 The nice thing about using GitHub Marketplace is that your integrations and billing are all consolidated in one place.
-As an orgnization or a billing manager, it is much easier to manage all these different services from a single hub.
+As an organization or a billing manager, it is much easier to manage all these different services from a single hub.
 
 ## CI/CD
 
@@ -55,7 +60,8 @@ As an orgnization or a billing manager, it is much easier to manage all these di
     - **Reusing** and **sharing** code fragments through *Orbs*
     - Slack integration for alerting on failed builds
   * **Cons:**
-    - As of now, **mono repo** builds are not built-in
+    - Steps cannot be parallelized within a job 
+    - **Mono repo** builds do not have built-in support
     - External Orbs need to be packaged and published (they cannot be directly referenced from their code bases)
     - Pipelines are triggered on push to *branches* and *tags* (cannot work with other GitHub events such as *release*)
 
@@ -185,7 +191,7 @@ As an orgnization or a billing manager, it is much easier to manage all these di
     - Bad UI/UX
     - No code quality feature
     - *diff coverage* GitHub status is combined with *total coverage* GitHub status
-    - Shows a check on `master` causing `master` branch go red in repos with not enough coverage
+    - Shows a check on `master` causing `master` branch goes red in repos with not enough coverage
 
 ## Dependency Management
 
@@ -299,18 +305,6 @@ As an orgnization or a billing manager, it is much easier to manage all these di
     - Modifies the GitHub interface and experience
 
 ### Zube https://zube.io
-
-  * **Features:**
-    - Kanban-style project management
-    - **Customizable** workflows
-  * **Pros:**
-    - Automated workflow with GitHub **pull requests** and **issues**
-    - Provides **analytics and metrics** (velocity, burndown, etc.)
-    - Integration with **Slack**
-  * **Cons:**
-    - The UI is not accessible on GitHub
-
-### Waffle https://waffle.io
 
   * **Features:**
     - Kanban-style project management
