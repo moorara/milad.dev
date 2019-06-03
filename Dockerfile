@@ -27,7 +27,7 @@ RUN hugo --gc --minify --baseURL "http://localhost:8080"
 FROM alpine:3.9
 RUN apk add --no-cache ca-certificates
 
-LABEL maintainer="Milad Irannejad" \
+LABEL maintainer="Milad" \
       homepage="https://milad.dev" \
       repository="https://github.com/moorara/milad.dev"
 

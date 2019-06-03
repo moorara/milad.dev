@@ -1,18 +1,31 @@
-baseURL      = "https://milad.dev"
-languageCode = "en-us"
-title        = "Milad Irannejad"
-theme        = "hermit"
+baseURL       = "https://milad.dev"
+languageCode  = "en-us"
+title         = "Milad Irannejad"
+theme         = "hermit"
+enableGitInfo = true
+# enableEmoji = true
+
+# Code Highlighting
+# pygmentsUseClassic = true
+# pygmentsCodefences = true
+
+# Enable Google Analytics
+googleAnalytics = "UA-141297099-1"
 
 [author]
   name = "Milad Irannejad"
 
 [params]
-  homeSubtitle = "Writing about tech and dev"
-
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
+
+  justifyContent = true
+  homeSubtitle   = "Writing about tech and dev"
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  gitUrl = "https://github.com/moorara/milad.dev/commit/"
 
   [[params.social]]
     name = "github"
