@@ -218,7 +218,7 @@ And here is how use this flag:
 ./app --log_level=debug
 ```
 
-### Changing Environemnt Variable Name
+### Changing Environment Variable Name
 
 If you want to override the default name for an environment variable, here is how you do it:
 
@@ -283,9 +283,9 @@ export LOG_LEVEL_FILE_PATH="./log_level.txt"
 ./app
 ```
 
-### Changing Separartor Character For Lists
+### Changing Separator Character For Lists
 
-If you want to pass a list of configuration values that the values themselves may include the default sperartor character (`,`),
+If you want to pass a list of configuration values that the values themselves may include the default separator character (`,`),
 here is how you can specify a different character to be considered as the separator:
 
 ```go
