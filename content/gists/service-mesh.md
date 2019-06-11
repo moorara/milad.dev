@@ -23,10 +23,10 @@ tags:
   - Service mesh is a central source of truth for **controlling the information flow** between microservices.
   - Mesh enables both the scalability benefits of microservices as well as centralized advantages of monoliths.
   - Service meshes come with built-in monitoring (**logging**, **metrics**, and **tracing**) for microservices communications.
-  - Service meshes has built-in support for resiliency features (_retries_, _timeouts_, deadlines, and _circuit breaking_).
+  - Service meshes have built-in support for resiliency features (_retries_, _timeouts_, deadlines, and _circuit breaking_).
   - They also have capabilities such as _east-west routing_, _access control_, _mTLS_, _smart load balancing_, etc.
   - **Data plane** refers to the layer allowing data to move between microservices and is implemented using _sidecars_.
-  - A **sidecar** is an auxiliary container running side-by-side the main container in your _pod_.
+  - A **sidecar** is an auxiliary container running side-by-side of the main container in your _pod_.
   - Microservices (main containers) communicate to each other through these sidecar containers.
   - Data plane does things like _service discovery_, _routing_, _load balancing_, _health checking_, _authn and authz_.
   - **Control plane** refers to the layer defining communication rules between microservices.
