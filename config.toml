@@ -53,6 +53,11 @@ googleAnalytics = "UA-141297099-1"
     weight = 30
 
   [[menu.main]]
+    name   = "Books"
+    url    = "books/"
+    weight = 40
+
+  [[menu.main]]
     name   = "About"
     url    = "about-me"
-    weight = 40
+    weight = 50

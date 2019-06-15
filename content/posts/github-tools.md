@@ -193,6 +193,20 @@ As an organization or a billing manager, it is much easier to manage all these d
     - *diff coverage* GitHub status is combined with *total coverage* GitHub status
     - Shows a check on `master` causing `master` branch goes red in repos with not enough coverage
 
+### GolangCI https://golangci.com
+
+  * **Features:**
+    - Automated code review comments on pull requests
+    - Pricing is per user
+  * **Pros:**
+    - Accurate and useful comments for Golang
+    - Configuration as code
+  * **Cons:**
+    - Only works for Golang
+    - Cannot detect bot users
+    - Very basic control panel
+    - Some comments can become very noisy
+
 ## Dependency Management
 
 ### Renovate https://renovatebot.com
@@ -315,3 +329,5 @@ As an organization or a billing manager, it is much easier to manage all these d
     - Integration with **Slack**
   * **Cons:**
     - The UI is not accessible on GitHub
+
+## Analytics
