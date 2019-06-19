@@ -60,7 +60,6 @@ As an organization or a billing manager, it is much easier to manage all these d
     - **Reusing** and **sharing** code fragments through *Orbs*
     - Slack integration for alerting on failed builds
   * **Cons:**
-    - Steps cannot be parallelized within a job 
     - **Mono repo** builds do not have built-in support
     - External Orbs need to be packaged and published (they cannot be directly referenced from their code bases)
     - Pipelines are triggered on push to *branches* and *tags* (cannot work with other GitHub events such as *release*)
