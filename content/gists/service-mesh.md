@@ -22,7 +22,7 @@ tags:
   - In an orchestrated environment (Kubernetes), containers talk to each other on top of overlay networking.
   - Service mesh is a central source of truth for **controlling the information flow** between microservices.
   - Mesh enables both the scalability benefits of microservices as well as centralized advantages of monoliths.
-  - Service meshes come with built-in monitoring (**logging**, **metrics**, and **tracing**) for microservices communications.
+  - Service meshes come with built-in observability (**logging**, **metrics**, and **tracing**) for microservices communications.
   - Service meshes have built-in support for resiliency features (_retries_, _timeouts_, deadlines, and _circuit breaking_).
   - They also have capabilities such as _east-west routing_, _access control_, _mTLS_, _smart load balancing_, etc.
   - **Data plane** refers to the layer allowing data to move between microservices and is implemented using _sidecars_.
