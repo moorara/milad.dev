@@ -75,7 +75,7 @@ all written in [Go](https://golang.org) and containerized using [Docker](https:/
 Since Go is a compiled and statically typed language, all gRPC/protobuf definitions should be compiled and source codes should be generated in advance.
 An API gateway receives HTTP RESTful requests and backend communications are done through gRPC calls between different microservices.
 
-<br/>![Example image](/images/ms-grpc-arch.png "Microservices gRPC Architecture")<br/>
+<br/>![Diagram](/images/ms-grpc-arch.png "Microservices gRPC Architecture")<br/>
 
 ## Challenges
 
