@@ -70,7 +70,38 @@ If any of the SLOs is violated, all effort should be spent on meeting the SLOs a
 Define your SLIs, sets your SLOs against these SLIs, monitor your SLIs and SLOs, and alert on violation of SLOs.
 When defining SLOs, keep a _safety margine_ and do NOT _overachieve_!
 
-### Monitoring & Alerting
+### Automation
+
+Automation is superior to manual operation in software, but more importantly, we need to build _autonomous_ systems.
+Automated systems serve as platforms that can be extended for applying to more system and use-cases.
+In many cases, they can be productized for the benefits of the business and profit as well.
+
+Needless to say, automation brings many values: _consistency_, _reliability_, _scaling_, _quickness_, _time_, _cost_, and so forth.
+It is not pragmatic to automated every aspect of a system for different reasons.
+Automated systems should not be maintained separately from core systems; otherwise, they start to diverge and fail.
+
+_Autonomous_ systems do not require human intervention and automation of operations.
+
+**Automate yourself out of a job!** Automating all the things and everything that can be automated.
+Such improvements have a cascading effect. The more time you spend on automating, the more time you would have for more automation and optimization.
+
+### Simplicity
+
+_Simplicity is a prerequisite to reliability.
+Constantly strive for eliminating complexity in the systems.
+
+_Essential complexity_ and _accidental complexity_ are very different!
+Essential complexity is an inherent property of the problem and cannot be removed
+while accidental complexity is associated with the solution and can be removed.
+
+_Software bloat_ refers to the situation in which a piece of software getting bigger, slower and
+harder to maintain over time as a result of adding more features, codes, and case-specific logics.
+
+Do not build something that will be not used. Do not comment code or flag it for possible use in the future!
+In software, **less is more**! Creating clear and minimal APIs are an integral aspect of having a simple system.
+_Modularity_, _versioning_, _well-scoped functionalities_, _releasing smaller batches_, etc. are all examples of requirements for simplicity.
+
+### Monitoring and Alerting
 
 Monitoring is the process of collecting, aggregating, processing, and presenting real-time quantitative data about a system.
 A monitoring system should determine _"what is broken"_ and _"why is broken"_.
@@ -87,22 +118,121 @@ For golden signals that Google defines for paging humans are the following:
    - Saturation: the utilization of available resources to your system.
 
 Every page that happens distracts a human from improving the system and building more automation!
-Pages should have enough context, should be _actionable_, and should require human intelligence (not a robotic response).
+Pages should have enough context, should be _actionable_, and should require human intelligence.
+If a page can be resolved by a robotic response, it the response should be autoamted and there should not be a page for it.
 When a system is not able to automatically fix itself, we can notify a human to investigate the issue.
+
 Your alerting and paging system should keep the _noise low_ and _signal high_.
 Rules that generate alerts for people should be simple to understand and represent a clear failure.
+The rules should allow a minimum period in which the alerting rule is true before firing an alert (to prevent the _flapping_ situation).
 
-### Playbooks
-
-Reliability is a function of _mean time to failure_ (MTTF) and _mean time to restore_ (MTTR).
-Recording the procedures and best practices ahead of time in playbooks improve MTTR metrics by 3x.
-Google's SREs rely on playbooks as well as other practices such as _Wheel of Misfortune_, _DiRT_, etc.
+It is also very important to monitor a system from the user point of view to
+make sure we monitor the actual user experience and what the user sees (black-box monitoring).
+Making sure that the cost of maintenance scale _sublinearly_ with the size of service and number of services,
+is the key to make monitoring and alerting maintainable. 
 
 ### Postmorterm Culture
 
-### Handling Overload
+The primary goals of writing a postmortem are to ensure:
 
-### Cascading Failures
+  - The incident is documented
+  - All root cause(s) are well understood
+  - Preventive actions are put in place
+
+Every incident is an opportunity to improve and harden the system. Postmortems must be **blameless**.
+They should focus on the contributing root cause(s) of the incident without mentioning any individual or team.
+A blameless postmortem culture gives people the confidence to escalate an incident without fear.
+
+### Testing For Reliability
+
+Traditional tests:
+
+  - Unit tests
+  - Integration tests
+  - System tests:
+    - Smoke tests
+    - Performance tests
+    - Regression tests
+
+Production tests:
+
+  - Configuration test
+  - Stress test
+  - Canary test
+
+### Overloads and Cascading Failures
+
+Clients and backend applications should be built to handle resource restrictions _gracefully_.
+In case of overload, they redirect when possible, serve degraded results, and handle errors transparently.
+
+In case of a _global overload_, the service should only return errors to misbehaving clients and keep others unaffected.
+Service owners should provision capacity for their services based on usage quotas per client
+assuming that not all of the clients are going to hit their limits simultaneously.
+When a client hits its quota, the backend service should quickly reject the requests.
+When the client detects that a large number of requests are rejected due to insufficient quota,
+it should start to self-regulate and cap the number of outgoing requests it makes.
+Adaptive throttling works well with clients that make frequent (as opposed to sporadic) requests.
+
+When the utilization approaches the configured threshold, the requests should be rejected based on their _criticality_.
+Requests with higher criticalities should have higher thresholds.
+Usually, a small number of services are overloaded. In this case, failed requests can be retried with a retry budget.
+If a large number of services are overloaded, failed requests should not be retried and errors should bubble up all the way to the caller.
+
+Blindly retrying requests can have a cascading effect and lead to even more overload and failures.
+Requests should be retried at the layer immediately above the layer that rejected the requests
+(return an error code implying the downstream service is overloaded and do not retry).
+Limit retries per request and always use randomized _exponential backoff_ when scheduling retries.
+
+The most common cause of cascading failures is _overload_.
+_Processor_, _memory_, _threads_, and _file descriptors_ are examples of resources that can be exhausted.
+When a couple of services become unavailable due to overload, the load on other services increases and cause them to become unavailable too.
+
+To prevent service overload, the following measures can be taken:
+
+  - Perform capacity planning
+  - _Load test_ the capacity limits of services, and test the _failure mode_ for overload
+  - Serve degraded responses
+  - Reject requests when the service is overloaded
+  - Upstream systems should reject the requests, rather than overloading the downstream ones:
+    - At the _reverse proxies_
+    - At the _load balancers_
+
+**Load shedding** refers to dropping some amount of load (incoming requests/traffic) when a service approaches overload conditions.
+**Graceful degradation** refers to reducing the amount of work required for fulfilling a request when a service is overloaded.
+Make sure you monitor and alert when services entering any of these modes.
+
+Long deadlines can result in resource consumption in upstream systems while downstream systems having problems.
+Short deadlines also can cause expensive requests to fail consistently (including retries).
+Sometimes services spend resources on handling requests that will miss their deadlines (retries will cause more resource waste in turn).
+Services should implement **deadline propagation**. For the requests that get fulfilled in multiple stages,
+at every stage, every service should check how much time is left before trying to work on the request.
+Also, consider setting an upper bound for outgoing deadlines.
+Services should also implement **cancellation propagation** to prevent unnecessary work being done by downstream services.
+
+You should test your services to understand how they behave when approaching overload and when overloaded.
+Under overload situation, the service starts serving errors and/or degraded results,
+but the rate at which requests are served successfully should not reduce significantly.
+You should also test and understand how your services return back to normal load situation.
+Furthermore, you should test and understand how clients use your services.
+
+Some of the factors that can trigger a cascading failure:
+
+  - Process death
+  - Process updates
+  - New rollouts
+  - Organic growth
+  - Changes in request profile
+  - Changes in resource limits
+
+Here are some immediate measures you can take in response to a cascading failure:
+
+  - Increase resources (scale up vertically)
+  - Temporarily disable health checks until all the services are stable
+  - Restart services
+  - Drop traffic
+  - Enter degraded modes 
+  - Eliminate batch load (non-critical offline jobs)
+  - Eliminate bad traffic (requests creating heavy load or causing crashes)
 
 ### Data Integrity
 
