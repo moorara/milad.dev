@@ -3,7 +3,6 @@ title: "A Comparison of GitHub Marketplace Apps"
 date: 2019-06-02T11:13:06-04:00
 draft: false
 toc: true
-images:
 tags:
   - dev
   - coding
@@ -152,6 +151,7 @@ As an organization or a billing manager, it is much easier to manage all these d
   * **Pros:**
     - Supports a wide range of programming languages
     - GitHub status for *code coverage* and *diff coverage*
+    - **Configuration-as-code** through a `yml` file in repo
     - GitHub PR checks are very clear and informative
     - Automated pull request comments for better **code quality** and readability
     - Shows covered and uncovered new lines of code in pull requests through a browser extension
@@ -214,7 +214,7 @@ As an organization or a billing manager, it is much easier to manage all these d
     - Automated dependency updates
   * **Pros:**
     - Supports a wide range of programming languages and technologies
-    - Almost an **out-of-box** solution (submits an onboarding pull request)
+    - An **out-of-box** solution (submits an onboarding pull request)
     - Highly configurable through a configuration file in the repo
     - Supports **private npm** repositories and packages
   * **Cons:**
