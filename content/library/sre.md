@@ -1,12 +1,13 @@
 ---
 title: "Site Reliability Engineering"
-date: 2019-06-30T00:58:00-04:00
-draft: true
+date: 2019-07-14T00:58:00-04:00
+draft: false
 toc: false
 tags:
   - book
   - sre
   - devops
+  - engieering
 ---
 
 <br/>![Book Cover](/images/book-sre.jpg "Site Reliability Engineering")<br/>
@@ -119,7 +120,7 @@ For golden signals that Google defines for paging humans are the following:
 
 Every page that happens distracts a human from improving the system and building more automation!
 Pages should have enough context, should be _actionable_, and should require human intelligence.
-If a page can be resolved by a robotic response, it the response should be autoamted and there should not be a page for it.
+If a page can be resolved by a robotic response, it the response should be automated and there should not be a page for it.
 When a system is not able to automatically fix itself, we can notify a human to investigate the issue.
 
 Your alerting and paging system should keep the _noise low_ and _signal high_.
@@ -236,4 +237,45 @@ Here are some immediate measures you can take in response to a cascading failure
 
 ### Data Integrity
 
+From the user experience point of view, _data loss_ and _data corruption_ are same as _service unavailability_.
+**data integrity** means services in the cloud remain _accessbile_ and _usable_ to users.
+data integrity is the means for achieving data availability.
+The key to having data integrity is _proactive prevention_, _early detection_, and _rapid recovery_ of data corruptions.
+
+A data integrity strategy can be chosen with respect to the following requirements for an application:
+
+  - Uptime
+  - Latency
+  - Scale
+  - Velocity
+  - Privacy
+
+If a combination of transactional (_ACID_) and eventual consistency (_BASE_) systems are used, the recovered data may not be necessarily correct.
+Moreover, with non-disruptive deployments and zero-downtime migrations, different versions of business logic may change data in parallel.
+Incompatible versions of independent services may act on data momentarily and causing data corruption or data loss.
+
+The factors of data integrity failure modes are _root cause_, _scope_, _rate_.
+
+_Archives_ cannot be used for recovery and they are meant to be for _auditing_, _discovery_, and _compliance_ purposes.
+_Backups_ can be loaded back into an application and are used for _disaster recovery_ (preferably within uptime requirements of a service).
+Deliver a **recovery system**, rather than a backup system! Test your disaster recovery process and make sure your backups can be restored in-time when needed.
+
+_replication_ and _redundancy_ are not **recoverability**.
+_point-in-time_ or _time-travel_ recovery refers to the process of recovering data and artifacts to a unique point in time.
+
+_Defense in depth!_.
+The first layer is **soft deletion** and **lazy deletion** which are an effective defense against inadvertent data deletion.
+The second line of defense is **backup** and **recovery**. And the last layer is **data validation** pipelines.
+
 ### Product Launch
+
+Any new code that introduces an externally visible change to an application is a _launch_.
+Any launch process should be _lightweight_, _robust_, _thorough_, _scalable_, and _adaptable_.
+**Launch checklists** are used to ensure _consistency_ and _completeness_ and reduce failures.
+
+Some very useful techniques for reliable launches are:
+
+  - Gradual and staged rollouts
+  - Using feature flags frameworks
+  - Dealing with abusive client behavior
+  - Load testing and testing overload behavior
