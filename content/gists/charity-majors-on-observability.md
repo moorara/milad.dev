@@ -26,7 +26,6 @@ tags:
  - Every single alert you get should be actionable. Every time you get paged you should be like this is new, I don't understand this (and not oh that again)!
  - Ops should stop being gatekeepers and blocking people. They have to stop a building castle and they have to start building a playground!
  - Every developer should be looking at prod every day. They should know what is normal, how to debug it, and how to get to a known state!
- - Once people experience the level of control, power, empathy with users and seeing the impact of their work, they will find it very hard to go back!
  - If management is not carving out enough project development time to get things fixed, no on-call situation will ever work!
  - SLOs (service-level objectives) define the quality of service that we agree to provide for users.
  - As long as you hit the SLO line, anything you do in engineering if fine! Everyone gets what they need, nobody feels micromanaged, and nobody feels completely abandoned!
