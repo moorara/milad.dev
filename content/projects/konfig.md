@@ -13,8 +13,8 @@ tags:
 ---
 
 [**konfig**](https://github.com/moorara/konfig) is a minimal and unopinionated _configuration management_ library for [Go](https://golang.org) applications.
-I based on [The 12-Factor App](https://12factor.net/config) and as a response to repeating myself across every single microservice I have been working on.
-This library has been used in production both in my past and current jobs for around two years now.
+It is based on [The 12-Factor App](https://12factor.net/config).
+I created this library as a response to repeating myself across almost every single service and application.
 
 It is a very minimal and lightweight library for reading configuration values either from _command-line arguments_, _environment variables_, or _files_.
 It uses reflection to automatically convert the input values to the desired types defined in golang.
@@ -23,16 +23,16 @@ It does NOT use the built-in `flag` package, so you can separately define and pa
 
 These are all types supported currently:
 
-  * `bool`, `[]bool`
-  * `string`, `[]string`
-  * `int`, `int8`, `int16`, `int32`, `int64`
-  * `[]int`, `[]int8`, `[]int16`, `[]int32`, `[]int64`
-  * `uint`, `uint8`, `uint16`, `uint32`, `uint64`
-  * `[]uint`, `[]uint8`, `[]uint16`, `[]uint32`, `[]uint64`
-  * `float32`, `float64`
-  * `[]float32`, `[]float64`
-  * `time.Duration`, `[]time.Duration`
-  * `url.URL`, `[]url.URL`
+  - `bool`, `[]bool`
+  - `string`, `[]string`
+  - `float32`, `float64`
+  - `[]float32`, `[]float64`
+  - `int`, `int8`, `int16`, `int32`, `int64`
+  - `[]int`, `[]int8`, `[]int16`, `[]int32`, `[]int64`
+  - `uint`, `uint8`, `uint16`, `uint32`, `uint64`
+  - `[]uint`, `[]uint8`, `[]uint16`, `[]uint32`, `[]uint64`
+  - `time.Duration`, `[]time.Duration`
+  - `url.URL`, `[]url.URL`
 
 ## Getting Started
 
@@ -337,19 +337,19 @@ export TOKEN_FILE="./token.txt"
 ./app
 ```
 
-### Using Options
+## Options
 
 You can pass a list of options to `Pick` method.
-These options are helpers for specific situations and setups.
+These options are helpers for specific setups and situations.
 
 For example, `konfig.Telepresence()` option lets you read configuration files
-when running your application in a [Telepresence](https://www.telepresence.io) shell.
+when running your application in a [Telepresence](https://www.telepresence.io) environment.
 You can read more about _Telepresence_ proxied volumes [here](https://www.telepresence.io/howto/volumes.html).
 
 ## Debugging
 
 If for any reason configuration values are not read as you expected,
-you can use `PickAndLog` method to see how exactly your configuration values are read.
+you can use `Debug` option to see how exactly your configuration values are read.
 Here is an example:
 
 ```go
@@ -369,7 +369,7 @@ var Config = struct {
 }
 
 func main() {
-  konfig.PickAndLog(&Config)
+  konfig.Pick(&Config, konfig.Debug())
   fmt.Printf("Port:     %d\n", Config.Port)
   fmt.Printf("LogLevel: %s\n", Config.LogLevel)
 }
