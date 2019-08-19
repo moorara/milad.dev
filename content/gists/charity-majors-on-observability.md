@@ -12,7 +12,7 @@ tags:
 
  - Observability refers to three different things: **logs**, **metrics**, and **traces**.
  - The problem with logs is that you have to know what to search for before you know what the problem is!
- - The problem with metrics is they are aggregated by time and you cannot beak them down by high-cardinality dimensions (like user id for example).
+ - The problem with metrics is they are aggregated by time and you cannot break them down by high-cardinality dimensions (like user id for example).
  - Logs, metrics, traces, and events they each prematurely optimize one thing and comprise another thing based on a premise upfront.
  - You don't want to write your observability data to many different places and copy-paste IDs from tool to tool trying to track down a single problem!
  - You want one source of truth and you want to be able to go from very high-level dashboards to very low-level data.
