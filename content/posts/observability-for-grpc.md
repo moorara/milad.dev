@@ -1,13 +1,11 @@
 ---
 title: "Cloud-Native Observability For gRPC Services in Go"
-date: 2019-07-16T16:00:00-04:00
+date: 2019-08-16T16:00:00-04:00
 draft: true
 toc: true
 tags: 
   - api
-  - rpc
   - grpc
-  - protobuf
   - golang
   - backend
   - observability
@@ -18,11 +16,12 @@ tags:
   - metrics
   - tracing
   - events
-  - openmetrics
-  - opentracing
-  - cloud-native
 ---
+
+## What is Observability?
+
+## Observability vs. Visibility
 
 ## Pillars of Observability
 
-## Observability vs. Visibility
+## Other Solutions

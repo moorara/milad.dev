@@ -240,7 +240,7 @@ We will see how `konfig` can automatically detect a Telepresence session and rea
 First, let's make a change to our code as follows:
 
 ```go
-  konfig.PickAndLog(&Config, konfig.Telepresence())
+  konfig.Pick(&Config, konfig.Debug(), konfig.Telepresence())
   log.Printf("auth token: %s", Config.AuthToken)
 ```
 
