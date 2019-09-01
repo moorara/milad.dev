@@ -350,6 +350,7 @@ You can read more about _Telepresence_ proxied volumes [here](https://www.telepr
 
 If for any reason configuration values are not read as you expected,
 you can use `Debug` option to see how exactly your configuration values are read.
+`Debug` accepts a `verbosity` parameter which specifies the verbosity level of logs. 
 Here is an example:
 
 ```go
@@ -369,7 +370,7 @@ var Config = struct {
 }
 
 func main() {
-  konfig.Pick(&Config, konfig.Debug())
+  konfig.Pick(&Config, konfig.Debug(3))
   fmt.Printf("Port:     %d\n", Config.Port)
   fmt.Printf("LogLevel: %s\n", Config.LogLevel)
 }

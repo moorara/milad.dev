@@ -1,6 +1,6 @@
 ---
 title: "Back to the Future with Relational NoSQL"
-date: 2019-07-14T10:12:00-04:00
+date: 2019-09-01T01:00:00-04:00
 draft: true
 toc: false
 tags:
