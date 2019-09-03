@@ -18,7 +18,7 @@ tags:
 
   - Dynamic configuration management and secret injection refer to updating an application with new configurations and secrets in a non-disruptive way.
   - Kubernetes _ConfigMaps_ and _Secrets_ mounted as files into containers will be updated with new values automatically.
-  - konfig makes dynamic configuration management and secret injection very easy to implement and use for Go applications.
+  - [konfig](https://github.com/moorara/konfig) makes dynamic configuration management and secret injection very easy to implement and use for Go applications.
 
 ## The Problem
 
@@ -139,7 +139,7 @@ func main() {
 }
 ```
 
-This is `Dockerfile` we use for containerizing our server application:
+This is the `Dockerfile` we use for containerizing our server application:
 
 ```dockerfile
 FROM golang:1.12-alpine as builder
@@ -335,7 +335,7 @@ func main() {
 }
 ```
 
-This is `Dockerfile` we use for containerizing our server application:
+This is the `Dockerfile` we use for containerizing our server application:
 
 ```dockerfile
 FROM golang:1.12-alpine as builder
