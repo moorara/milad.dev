@@ -18,7 +18,7 @@ RUN hugo_tag=${HUGO_TAG:-$(curl -s https://api.github.com/repos/gohugoio/hugo/re
     rm hugo.tar.gz
 
 # Build site
-WORKDIR ./site
+WORKDIR /site
 COPY . .
 RUN hugo --gc --minify --baseURL "http://localhost:8080"
 

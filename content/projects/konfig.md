@@ -49,7 +49,7 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   Port        int
   LogLevel    string
   Timeout     time.Duration
@@ -60,11 +60,11 @@ var Config = struct {
 }
 
 func main() {
-  konfig.Pick(&Config)
-  fmt.Printf("Port:        %d\n", Config.Port)
-  fmt.Printf("LogLevel:    %s\n", Config.LogLevel)
-  fmt.Printf("Timeout:     %v\n", Config.Timeout)
-  for _, u := range Config.DatabaseURL {
+  konfig.Pick(&config)
+  fmt.Printf("Port:        %d\n", config.Port)
+  fmt.Printf("LogLevel:    %s\n", config.LogLevel)
+  fmt.Printf("Timeout:     %v\n", config.Timeout)
+  for _, u := range config.DatabaseURL {
     fmt.Printf("DatabaseURL: %s\n", u.String())
   }
 }
@@ -148,11 +148,11 @@ echo -n "debug" > log_level.txt
 echo -n "60s" > timeout.txt
 echo -n "mongo-1:27017,mongo-2:27017,mongo-3:27017" > database_url.txt
 
-export PORT_FILE="./port.txt"
-export LOG_LEVEL_FILE="./log_level.txt"
-export TRACING_FILE="./tracing.txt"
-export TIMEOUT_FILE="./timeout.txt"
-export DATABASE_URL_FILE="./database_url.txt"
+export PORT_FILE="$PWD/port.txt"
+export LOG_LEVEL_FILE="$PWD/log_level.txt"
+export TRACING_FILE="$PWD/tracing.txt"
+export TIMEOUT_FILE="$PWD/timeout.txt"
+export DATABASE_URL_FILE="$PWD/database_url.txt"
 
 ./app
 ```
@@ -185,7 +185,7 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   Port     int
   LogLevel string
 } {
@@ -193,7 +193,7 @@ var Config = struct {
 }
 
 func main() {
-  konfig.Pick(&Config)
+  konfig.Pick(&config)
   flag.Parse()
 }
 ```
@@ -236,15 +236,15 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   LogLevel string `flag:"loglevel" env:"LOGLEVEL" fileenv:"LOGLEVEL_FILE_PATH"`
 } {
   LogLevel: "info", // default logging level
 }
 
 func main() {
-  konfig.Pick(&Config)
-  fmt.Printf("LogLevel: %s\n", Config.LogLevel)
+  konfig.Pick(&config)
+  fmt.Printf("LogLevel: %s\n", config.LogLevel)
 }
 ```
 
@@ -278,13 +278,13 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   Rows []string `sep:"|"`
 } {}
 
 func main() {
-  konfig.Pick(&Config)
-  for _, r := range Config.Rows {
+  konfig.Pick(&config)
+  for _, r := range config.Rows {
     fmt.Println(r)
   }
 }
@@ -311,13 +311,13 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   Token string `env:"-" fileenv:"-"`
 } {}
 
 func main() {
-  konfig.Pick(&Config)
-  fmt.Println(Config.Token)
+  konfig.Pick(&config)
+  fmt.Println(config.Token)
 }
 ```
 
@@ -333,7 +333,7 @@ export TOKEN=123456789
 
 # ONLY this works!
 echo -n "123456789" > token.txt
-export TOKEN_FILE="./token.txt"
+export TOKEN_FILE="$PWD/token.txt"
 ./app
 ```
 
@@ -342,7 +342,11 @@ export TOKEN_FILE="./token.txt"
 You can pass a list of options to `Pick` method.
 These options are helpers for specific setups and situations.
 
-For example, `konfig.Telepresence()` option lets you read configuration files
+You can use `konfig.Debug()` option for printing debugging information.
+
+`konfig.WatchInterval` option can be used for overriding the default interval when using `Watch()` method.
+
+`konfig.Telepresence()` option lets you read configuration files
 when running your application in a [Telepresence](https://www.telepresence.io) environment.
 You can read more about _Telepresence_ proxied volumes [here](https://www.telepresence.io/howto/volumes.html).
 
@@ -350,7 +354,7 @@ You can read more about _Telepresence_ proxied volumes [here](https://www.telepr
 
 If for any reason configuration values are not read as you expected,
 you can use `Debug` option to see how exactly your configuration values are read.
-`Debug` accepts a `verbosity` parameter which specifies the verbosity level of logs. 
+`Debug` accepts a `verbosity` parameter which specifies the verbosity level of logs.
 Here is an example:
 
 ```go
@@ -362,7 +366,7 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   Port     int
   LogLevel string
 } {
@@ -370,9 +374,9 @@ var Config = struct {
 }
 
 func main() {
-  konfig.Pick(&Config, konfig.Debug(3))
-  fmt.Printf("Port:     %d\n", Config.Port)
-  fmt.Printf("LogLevel: %s\n", Config.LogLevel)
+  konfig.Pick(&config, konfig.Debug(3))
+  fmt.Printf("Port:     %d\n", config.Port)
+  fmt.Printf("LogLevel: %s\n", config.LogLevel)
 }
 ```
 
@@ -385,7 +389,8 @@ Now, try running the app as follows:
 And, you see the following output:
 
 ```
-2019/07/13 13:53:58 pick options: 
+2019/07/13 13:53:58 ----------------------------------------------------------------------------------------------------
+2019/07/13 13:53:58 Options: Debug<3>
 2019/07/13 13:53:58 ----------------------------------------------------------------------------------------------------
 2019/07/13 13:53:58 [Port] expecting flag name: port
 2019/07/13 13:53:58 [Port] expecting environment variable name: PORT
@@ -405,4 +410,74 @@ And, you see the following output:
 2019/07/13 13:53:58 ----------------------------------------------------------------------------------------------------
 Port:     3000
 LogLevel: info
+```
+
+You can also enable debugging logs by setting the `KONFIG_DEBUG` environment variable to a verbosity level.
+
+## Watching
+
+You can write new values to your configuration files, while your application is running.
+konfig can watch your cofiguration files and if a new value is written, it will notify a list of subscribers.
+This feature allows you to implement **dynamic configuration** and **secret injection** easily.
+Let's show how this feature works using an example:
+
+```go
+package main
+
+import (
+  "fmt"
+  "sync"
+  "time"
+
+  "github.com/moorara/konfig"
+)
+
+var config = struct {
+  sync.Mutex
+  LogLevel string
+} {}
+
+func main() {
+  ch := make(chan konfig.Update)
+  go func() {
+    for update := range ch {
+      if update.Name == "LogLevel" {
+        config.Lock()
+        fmt.Printf("Now logging with %s level ...\n", config.LogLevel)
+        config.Unlock()
+      }
+    }
+  }()
+
+  stop, _ := konfig.Watch(&config, []chan konfig.Update{ch}, konfig.WatchInterval(2 * time.Second))
+  defer stop()
+
+  wait := make(chan bool)
+  <-wait
+}
+```
+
+Next, let's create a configuration file:
+
+```bash
+echo -n "Warn" > log_level
+export LOG_LEVLE_FILE="$PWD/log_level"
+```
+
+Now, we run the app and we should see the following message:
+
+```
+Now logging with Warn level ...
+```
+
+In a new terminal, we write a new value to `log_level` file:
+
+```bash
+echo -n "Debug" > log_level
+```
+
+Within a few seconds, we should see the following message:
+
+```
+Now logging with Debug level ...
 ```
