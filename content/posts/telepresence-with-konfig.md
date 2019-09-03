@@ -5,9 +5,10 @@ draft: false
 toc: true
 tags:
   - dry
-  - config
   - konfig
   - golang
+  - config
+  - secret
   - kubernetes
   - telepresence
 ---
@@ -60,7 +61,7 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   Port        int
   LogLevel    string
   Timeout     time.Duration
@@ -71,7 +72,7 @@ var Config = struct {
 }
 
 func main() {
-  konfig.Pick(&Config)
+  konfig.Pick(&config)
   // ...
 }
 ```
@@ -100,13 +101,13 @@ import (
   "github.com/moorara/konfig"
 )
 
-var Config = struct {
+var config = struct {
   AuthToken string
 } {}
 
 func main() {
-  konfig.Pick(&Config, konfig.Telepresence())
-  log.Printf("making service-to-service calls using this token: %s", Config.AuthToken)
+  konfig.Pick(&config, konfig.Telepresence())
+  log.Printf("making service-to-service calls using this token: %s", config.AuthToken)
 
   http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
     fmt.Fprintln(w, "Hello, World!")
@@ -254,7 +255,8 @@ telepresence --swap-deployment myapp --run ./app
 You will see our app is running locally and the `AuthToken` is successfully read from the Telepresence environment.
 
 ```
-2019/07/14 19:58:24 pick options: Telepresence
+2019/07/14 19:58:24 ----------------------------------------------------------------------------------------------------
+2019/07/14 19:58:24 Options: Debug<3> + Telepresence
 2019/07/14 19:58:24 ----------------------------------------------------------------------------------------------------
 2019/07/14 19:58:24 [AuthToken] expecting flag name: auth.token
 2019/07/14 19:58:24 [AuthToken] expecting environment variable name: AUTH_TOKEN
