@@ -344,7 +344,11 @@ These options are helpers for specific setups and situations.
 
 You can use `konfig.Debug()` option for printing debugging information.
 
-`konfig.WatchInterval` option can be used for overriding the default interval when using `Watch()` method.
+If you want to prefix all flag names with a specific you can use `konfig.PrefixFlag()` option.
+You can use `konfig.PrefixEnv()` option to prefix all environment variable names with a string.
+Similarly, using `konfig.PrefixFileEnv()` option you can prefix all file environment variable names with a string.
+
+`konfig.WatchInterval()` option can be used for overriding the default interval when using `Watch()` method.
 
 `konfig.Telepresence()` option lets you read configuration files
 when running your application in a [Telepresence](https://www.telepresence.io) environment.
@@ -355,6 +359,8 @@ You can read more about _Telepresence_ proxied volumes [here](https://www.telepr
 If for any reason configuration values are not read as you expected,
 you can use `Debug` option to see how exactly your configuration values are read.
 `Debug` accepts a `verbosity` parameter which specifies the verbosity level of logs.
+You can also enable debugging logs by setting the `KONFIG_DEBUG` environment variable to a verbosity level.
+
 Here is an example:
 
 ```go
@@ -411,8 +417,6 @@ And, you see the following output:
 Port:     3000
 LogLevel: info
 ```
-
-You can also enable debugging logs by setting the `KONFIG_DEBUG` environment variable to a verbosity level.
 
 ## Watching
 
