@@ -21,7 +21,7 @@ tags:
 
 ### What is a Language?
 
-Every Langauge is defined by specifying four sets:
+Every Language is defined by specifying four sets:
 
 #### Alphabet
 
