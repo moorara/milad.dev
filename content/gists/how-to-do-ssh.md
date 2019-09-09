@@ -4,12 +4,12 @@ date: 2019-08-08T16:00:00-04:00
 draft: false
 toc: false
 tags:
- - ssh
- - security
- - google
- - uber
- - netflix
- - facebook
+  - ssh
+  - security
+  - google
+  - uber
+  - netflix
+  - facebook
 ---
 
 **TL;DR**

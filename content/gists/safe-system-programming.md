@@ -4,9 +4,9 @@ date: 2019-08-08T18:00:00-04:00
 draft: false
 toc: false
 tags:
- - rust
- - memory-safety
- - programming-language
+  - rust
+  - memory-safety
+  - programming-language
 ---
 
 ## TL;DR

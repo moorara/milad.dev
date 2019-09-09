@@ -4,8 +4,8 @@ date: 2019-08-12T21:00:00-04:00
 draft: false
 toc: false
 tags:
- - microservices
- - observability
+  - observability
+  - microservices
 ---
 
 **TL;DR**
