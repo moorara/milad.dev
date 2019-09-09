@@ -1,6 +1,6 @@
 ---
-title: "Cloud-Native Observability For gRPC Services in Go"
-date: 2019-08-16T16:00:00-04:00
+title: "Cloud-Native Observability For gRPC in Go"
+date: 2019-09-09T09:00:00-04:00
 draft: true
 toc: true
 tags: 
@@ -24,4 +24,4 @@ tags:
 
 ## Pillars of Observability
 
-## Other Solutions
+## gRPC Interceptors
