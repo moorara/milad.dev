@@ -348,11 +348,17 @@ If you want to prefix all flag names with a specific you can use `konfig.PrefixF
 You can use `konfig.PrefixEnv()` option to prefix all environment variable names with a string.
 Similarly, using `konfig.PrefixFileEnv()` option you can prefix all file environment variable names with a string.
 
-`konfig.WatchInterval()` option can be used for overriding the default interval when using `Watch()` method.
+You can use `konfig.ListSep()` option to specify the _list separator_ for all fields with _slice_ type.
+
+`konfig.SkipFlag()` option will skip command-line flags as a source for all fields.
+Likewise, you can use `konfig.SkipEnv()` option to skip environment variables as a source for all fields.
+And you can also use `konfig.SkipFileEnv()` for skipping file environment variables (and configuration files) as a source for all fields.
 
 `konfig.Telepresence()` option lets you read configuration files
 when running your application in a [Telepresence](https://www.telepresence.io) environment.
 You can read more about _Telepresence_ proxied volumes [here](https://www.telepresence.io/howto/volumes.html).
+
+`konfig.WatchInterval()` option can be used for overriding the default interval when using `Watch()` method.
 
 ## Debugging
 
