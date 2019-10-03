@@ -3,7 +3,7 @@ title: "My Manifesto"
 date: 2019-10-02T22:00:00-04:00
 ---
 
-**My Do's**
+**Do's**
 
   - ✅ Simplifying, cleaning, and making easy
   - ✅ Starting with UX/DX
@@ -12,7 +12,7 @@ date: 2019-10-02T22:00:00-04:00
   - ✅ Making lasting changes
   - ✅ Treating other developers as customers
 
-**My Don'ts**
+**Don'ts**
 
   - ❌ Over-engineering
   - ❌ Over-abstraction
