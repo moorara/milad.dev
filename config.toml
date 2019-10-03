@@ -63,8 +63,8 @@ googleAnalytics = "UA-141297099-1"
     weight = 50
 
   [[menu.main]]
-    name   = "My Engineering"
-    url    = "engineering"
+    name   = "My Manifesto"
+    url    = "manifesto"
     weight = 60
 
   [[menu.main]]
