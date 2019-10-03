@@ -1,5 +1,5 @@
 ---
-title: "Favorite Quotes"
+title: "Quotes"
 date: 2019-10-02T22:00:00-04:00
 ---
 

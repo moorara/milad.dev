@@ -45,4 +45,4 @@ tags:
       - Improve by building on the work of others.
       - Visible work: open code repositories, internal blogs, etc.
 
-[READ MORE](https://www.infoq.com/presentations/architecture-without-an-end-state)
+[Presentation](https://www.infoq.com/presentations/architecture-without-an-end-state)
