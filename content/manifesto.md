@@ -5,12 +5,13 @@ date: 2019-10-02T22:00:00-04:00
 
 **Do's**
 
-  - ✅ Simplifying, cleaning, and making easy
-  - ✅ Starting with UX/DX
-  - ✅ Building just enough
-  - ✅ Fixing the root cause
-  - ✅ Making lasting changes
-  - ✅ Treating other developers as customers
+  - ✅ Simplify and clean
+  - ✅ make it easy to understand, maintain, and collaborate
+  - ✅ Start with UX/DX
+  - ✅ Build just enough
+  - ✅ Fix the root cause
+  - ✅ Make lasting changes
+  - ✅ Treat other developers like customers
 
 **Don'ts**
 
