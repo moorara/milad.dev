@@ -159,7 +159,7 @@ You can find an example of using Bison [here](https://github.com/moorara/compile
 [LLVM](https://llvm.org) (The LLVM Compiler Infrastructure) is an open-source project providing a set of tools
 for building a _front-end_ for any programming language and a _back-end_ for any target instruction-set (architecture).
 LLVM is built around a machine-independent intermediate representation which is a portable high-level assembly language.
-You can find the examples and tutorials [here](https://llvm.org/docs/tutorial)
+You can find the examples and tutorials [here](https://llvm.org/docs/tutorial).
 
 ## Building A Compiler in Go
 
