@@ -3,12 +3,23 @@ title: "My Manifesto"
 date: 2019-10-10T10:00:00-04:00
 ---
 
+My greatest qualities as an engineer are:
+
+  * How I treat other people
+  * How I work and collobarate as part of a team
+
+We don't need a title to be leaders. Everyone should be leader.
+
+  * Leaders eat last
+  * Leaders motivates by asking questions
+
 **Values**
 
+  - 💡 Listening
   - 💡 Integrity
-  - 💡 Pragmatism
   - 💡 Empathy
   - 💡 Respect
+  - 💡 Pragmatism
 
 **Do's**
 
@@ -20,6 +31,8 @@ date: 2019-10-10T10:00:00-04:00
   - ✅ Fix the root cause
   - ✅ Make lasting changes
   - ✅ Treat other developers like customers
+  - ✅ Ask the right questions
+  - ✅ One Step at a time
 
 **Don'ts**
 
