@@ -8,10 +8,10 @@ My greatest qualities as an engineer are:
   * How I treat other people
   * How I work and collobarate as part of a team
 
-We don't need a title to be leaders. Everyone should be leader.
+We don't need a title to be leaders. Everyone should be a leader.
 
   * Leaders eat last
-  * Leaders motivates by asking questions
+  * Leaders ask questions
 
 **Values**
 
