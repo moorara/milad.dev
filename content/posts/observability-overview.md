@@ -25,7 +25,7 @@ tags:
   - Metrics are time-series data (regular) with low cardinality.
     - Aggregated by time.
     - Used for real-time monitoring purposes.
-    - Can toke the distribution of data into account.
+    - Can take the distribution of data into account.
     - Enable service-level indicators (SLIs) and service-level objectives (SLOs).
     - CANNOT be broken down by high-cardinality dimensions (unique ids such user ids).
   - Traces are used for debugging and tracking requests across different processes and services.
