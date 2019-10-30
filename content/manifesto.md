@@ -25,6 +25,7 @@ We don't need a title to be leaders. Everyone should be a leader.
 
   - ✅ Automate
   - ✅ Simplify and clean
+  - ✅ Solve a problem every day
   - ✅ Make it easy to understand, maintain, and collaborate
   - ✅ Start with UX/DX
   - ✅ Build just enough
