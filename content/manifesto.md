@@ -32,7 +32,7 @@ We don't need a title to be leaders. Everyone should be a leader.
   - ✅ Make lasting changes
   - ✅ Treat other developers like customers
   - ✅ Ask the right questions
-  - ✅ One Step at a time
+  - ✅ One step at a time
 
 **Don'ts**
 
