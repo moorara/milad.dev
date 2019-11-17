@@ -23,17 +23,18 @@ We don't need a title to be leaders. Everyone should be a leader.
 
 **Do's**
 
-  - ✅ Automate
-  - ✅ Simplify and clean
   - ✅ Solve a problem every day
+  - ✅ Work smart by automating
+  - ✅ Simplify and clean
   - ✅ Make it easy to understand, maintain, and collaborate
   - ✅ Start with UX/DX
   - ✅ Build just enough
   - ✅ Fix the root cause
   - ✅ Make lasting changes
-  - ✅ Treat other developers like customers
   - ✅ Ask the right questions
   - ✅ One step at a time
+  - ✅ Treat developers like customers
+  - ✅ Make work fun!
 
 **Don'ts**
 
