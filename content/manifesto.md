@@ -15,9 +15,10 @@ We don't need a title to be leaders. Everyone should be a leader.
 
 **Values**
 
-  - 💡 Listening
   - 💡 Integrity
+  - 💡 Listening
   - 💡 Empathy
+  - 💡 Helping
   - 💡 Respect
   - 💡 Pragmatism
 
