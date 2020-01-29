@@ -129,12 +129,12 @@ func main() {
 
   // HTTP handler
   http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    logger.Info("message", "new request received")
+    logger.InfoKV("message", "new request received")
     w.WriteHeader(http.StatusOK)
   })
 
   // Starting the HTTP server
-  logger.Info("message", "starting http server ...")
+  logger.InfoKV("message", "starting http server ...")
   http.ListenAndServe(":8080", nil)
 }
 ```
@@ -142,13 +142,13 @@ func main() {
 This is the `Dockerfile` we use for containerizing our server application:
 
 ```dockerfile
-FROM golang:1.12-alpine as builder
+FROM golang:1.13-alpine as builder
 RUN apk add --no-cache git
 WORKDIR /repo
 COPY . .
 RUN go build
 
-FROM alpine:3.10
+FROM alpine:3.11
 EXPOSE 8080
 COPY --from=builder /repo/server /usr/local/bin/
 RUN chown -R nobody:nogroup /usr/local/bin/server
@@ -307,7 +307,7 @@ func main() {
   )
 
   // Sending requests to server
-  logger.Info("message", "start sending requests ...")
+  logger.InfoKV("message", "start sending requests ...")
 
   client := &http.Client{
     Timeout:   5 * time.Second,
@@ -320,17 +320,17 @@ func main() {
   for range ticker.C {
     req, err := http.NewRequest("GET", url, nil)
     if err != nil {
-      logger.Error("error", err)
+      logger.ErrorKV("error", err)
       continue
     }
 
     resp, err := client.Do(req)
     if err != nil {
-      logger.Error("error", err)
+      logger.ErrorKV("error", err)
       continue
     }
 
-    logger.Info("message", "response received from server", "http.statusCode", resp.StatusCode)
+    logger.InfoKV("message", "response received from server", "http.statusCode", resp.StatusCode)
   }
 }
 ```
@@ -338,13 +338,13 @@ func main() {
 This is the `Dockerfile` we use for containerizing our server application:
 
 ```dockerfile
-FROM golang:1.12-alpine as builder
+FROM golang:1.13-alpine as builder
 RUN apk add --no-cache git
 WORKDIR /repo
 COPY . .
 RUN go build
 
-FROM alpine:3.10
+FROM alpine:3.11
 COPY --from=builder /repo/client /usr/local/bin/
 RUN chown -R nobody:nogroup /usr/local/bin/client
 USER nobody
