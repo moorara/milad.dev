@@ -118,13 +118,13 @@ func main() {
 ```
 
 ```dockerfile
-FROM golang:1.12-alpine as builder
+FROM golang:1.13-alpine as builder
 RUN apk add --no-cache git
 WORKDIR /repo
 COPY . .
 RUN go build -o app
 
-FROM alpine:3.10
+FROM alpine:3.11
 EXPOSE 8080
 COPY --from=builder /repo/app /usr/local/bin/
 RUN chown -R nobody:nogroup /usr/local/bin/app
