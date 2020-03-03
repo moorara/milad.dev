@@ -10,7 +10,7 @@ tags:
   - runc
 ---
 
-**TL;DR**
+## TL;DR
 
  - The Open Container Initiative (OCI) is launched in June 2015 by Docker, CoreOS, and other leaders in the container industry.
  - The OCI currently contains two specifications: [runtime-spec](https://github.com/opencontainers/runtime-spec) and [image-spec](https://github.com/opencontainers/image-spec)
@@ -32,7 +32,7 @@ tags:
    - This also allows updating dockerd or containerd without killing the running containers.
  - Docker CLI (docker command) and other Docker clients communicate with dockerd (docker-engine).
 
-**READ MORE**
+## READ MORE
 
  - [OCI](https://www.opencontainers.org)
  - [containerd](https://containerd.io)

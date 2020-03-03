@@ -12,7 +12,7 @@ tags:
   - facebook
 ---
 
-**TL;DR**
+## TL;DR
 
   - A study shows there is a cybersecurity attack every _39_ seconds.
   - In a typical SSH protocol:
@@ -30,7 +30,7 @@ tags:
   - Netflix’s SSH bastion uses SSO to authenticate users and issuing short-lived certificates.
   - [Teleport](https://gravitational.com/teleport) provides _role-based access control_ using existing SSH protocol.
 
-**READ MORE**
+## READ MORE
 
   - [How Uber, Facebook, and Netflix Do SSH](https://gravitational.com/blog/how_uber_netflix_facebook_do_ssh)
   - [Introducing the Uber SSH Certificate Authority](https://medium.com/uber-security-privacy/introducing-the-uber-ssh-certificate-authority-4f840839c5cc)

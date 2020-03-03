@@ -1,11 +1,13 @@
 ---
-title: "What We Got Wrong: Lessons from the Birth of Microservices"
+title: "Lessons from the Birth of Microservices"
 date: 2020-02-24T14:00:00-04:00
 draft: false
 toc: false
 tags:
   - microservices
   - cloud-computing
+  - serverless
+  - observability
   - google
 ---
 
