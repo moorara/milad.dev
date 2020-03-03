@@ -14,7 +14,7 @@ tags:
   - The Rust compiler is built on top of [LLVM](https://llvm.org).
   - Rust is a **statically-typed** language.
     - Rust has **optional types** for handling _null_ and the compiler requires the `None` case to be handled.
-    - Rust requires top-level items like function arguments and constants to have explicit types, while allowing type inference inside of function bodies.
+    - Rust requires top-level items like function arguments and constants to have explicit types while allowing type inference inside of function bodies.
   - Rust's strong type system and memory safety are all enforced at compile time!
     - Rust does not need to have a garbage collector!
     - Rust gives you the choice of storing data on the stack or on the heap.
@@ -27,7 +27,7 @@ tags:
     - This enables more power, but the programmer is responsible for ensuring that the code is truly safe.
     - The unsafe code can be wrapped in higher-level abstractions which guarantee that all uses of the abstraction are safe.
   - Many aspects of creating and maintaining production-quality software such as testing, dependency management, documentation, etc. are first-class citizens in Rust.
-  - Prototyping solutions in Rust can be challenging due to the fact that Rust requires covering 100% of the conditions!
+  - Prototyping solutions in Rust can be challenging since Rust requires covering 100% of the conditions!
 
 ## READ MORE
 
