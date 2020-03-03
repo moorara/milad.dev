@@ -1,5 +1,5 @@
 ---
-title: "What is Rust and why is it so popular?"
+title: "What is Rust and Why is it So Popular?"
 date: 2020-03-01T20:00:00-04:00
 draft: false
 toc: false
