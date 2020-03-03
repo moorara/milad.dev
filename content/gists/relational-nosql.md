@@ -1,7 +1,7 @@
 ---
 title: "Back to the Future with Relational NoSQL"
 date: 2020-02-29T22:00:00-04:00
-draft: true
+draft: false
 toc: false
 tags:
   - sql
