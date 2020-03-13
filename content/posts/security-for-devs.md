@@ -1,5 +1,5 @@
 ---
-title: "Security Best Practices For Developers"
+title: "Security For Developers"
 date: 2020-03-12T20:00:00-04:00
 draft: false
 toc: true
@@ -18,7 +18,7 @@ As a result, I decided to do a little bit of research and prepare a cheatsheet!
 
 ## Security by Design Principles
 
-**Minimize Attack Surface Area**
+### Minimize Attack Surface Area
 
 Every new feature added to an application increases the overall risk to the application by providing more opportunities for attackers.
 
@@ -28,23 +28,23 @@ Make sure you:
   - Expose the minimum amount of data needed.
   - Restrict access to the minimum number of users.
 
-**Establish Secure Defaults**
+### Establish Secure Defaults
 
 An application must be _secure_ and _safe_ by default.
 For delivering an _out of the box_ experience, the default settings should be secure.
 Users may be allowed to turn off some of the security requirements, but by default, a high-level security level is enabled.
 
-**Principle of Least Privilege**
+### Principle of Least Privilege
 
 The Principle of Least Privilege (POLP) requires a user to have the minimum required permissions to perform a given task.
 This includes every aspect from application-specific permissions to processor, memory, network, and other permissions.
 
-**Principle of Defend in Depth**
+### Principle of Defend in Depth
 
 The principle of defense in depth states layered security mechanisms improve the security of the system as a whole.
 If one layer fails to defend against an attack, hopefully, other layers will protect the system or at least mitigate the consequences.
 
-**Fail Securely**
+### Fail Securely
 
 An application must securely handle errors and unexpected issues.
 
@@ -62,36 +62,36 @@ For example, they should not cause a security check not to be performed or be pe
 
 Last but not least, Failures should not provide users with additional privileges or sensitive information.
 
-**Do NOT Trust Services**
+### Do NOT Trust Services
 
 Never trust external services from a security perspective.
 Validate, verify, and secure all data and information returned from a service provider.
 
-**Separation of Duties**
+### Separation of Duties
 
 Separation of duties of segregation of duties is about have more than one entity to complete a task.
 Separation of duties increases protection from fraud and errors.
 The entity that approves a task should be separate from the entity that performs the task and they should be both different from the entity that verifies the task.
 
-**Avoid Security by Obscurity**
+### Avoid Security by Obscurity
 
 Security through obscurity is relying on _secrecy_ in design and implementation for achieving security.
 NEVER rely upon _security by obscurity_ as a means for securing a system.
 There should be enough security controls in place to keep an application safe without needing to hide the architecture, functionality, or source code.
 
-**Keep Security Simple**
+### Keep Security Simple
 
 Avoid using complicated security controls and sophisticated architectures for securing applications.
 Complex mechanisms can increase the _attack surface area_ and the security risk.
 
-**Fix Security Issues Correctly**
+### Fix Security Issues Correctly
 
 Once a security vulnerability is found, it is important to develop tests for it and understand the _root cause_ of it properly.
 It is also very important to make sure that all instances of a given security issue is fixed across the entire application.
 
 ## Common Security Vulnerabilities
 
-**Buffer Overflow**
+### Buffer Overflow
 
 Buffer overflow is a class of exploit in which a program writes some data to a buffer more than it can hold.
 A buffer is a continuous block of memory and when overflowed, the excessive data will be written into other parts of memory.
@@ -107,7 +107,7 @@ You can read more about this vulnerability here:
 
 ## Common Security Attacks
 
-**Query Injection**
+### Query Injection
 
 Query injection is a code injection attack and the most common type of it is _SQL injection_.
 The attacker crafts a special query and sends it to the server through an entry field.
@@ -126,7 +126,7 @@ You can read more about this attack here:
   - https://owasp.org/www-community/attacks/SQL_Injection
   - https://www.cloudflare.com/learning/security/threats/sql-injection
 
-**Cross-Site Scripting (XSS)**
+### Cross-Site Scripting (XSS)
 
 Cross-Site Scripting (XSS) attacks belong to _code injection_ category of attacks.
 
@@ -151,7 +151,7 @@ You can read more about this attack here:
   - https://owasp.org/www-community/attacks/xss
   - https://www.cloudflare.com/learning/security/threats/cross-site-scripting
 
-**Cross-Site Request Forgery (CSRF)**
+### Cross-Site Request Forgery (CSRF)
 
 Cross-Site Request Forgery (CSRF) works by tricking a user into invoking a request from a web application that the user is already authenticated with.
 This request is usually a **state-changing request** as opposed to stealing data.
