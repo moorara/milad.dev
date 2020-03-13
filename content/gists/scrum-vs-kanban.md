@@ -16,7 +16,7 @@ tags:
 |----|-------|--------|
 | KPI | **Team velocity** | **Cycle-time** |
 | Goal | Building highly **reliable** and **predictable** teams. | Building **flexible** and **resilient** teams. |
-| Suitable For | **Consistent** and **predictable** workloads.<br/>**Mid-term** and **long-term** Deliverables.<br/> **Multiple teams** at **scale**.  | **Unpredictable** and **arbitrary** workloads.<br/> **Short-term** and **high-priority** deliverables.<br> **Small** and **independent** teams.
+| Suitable For | **Consistent** and **predictable** workloads.<br/>**Mid-term** and **long-term** Deliverables.<br/> **Multiple teams** at **scale**.  | **Unpredictable** and **arbitrary** workloads.<br/> **Short-term** and **high-priority** deliverables.<br/> **Small** and **independent** teams.
 | Cadence | 2-Weeks **Sprints**<br/>3 to 5-Sprints **Milestones** | 1-Week **Beats** |
 | Roles | Product Owner (**PO**)<br/>Scrum Master (**SM**)<br/>Development Team | N/A |
 | Ceremonies | Planning<br/>Daily Scrums<br/>Review<br/>Demo<br/>Retro<br/>_Scrum of Scrums_ | Daily Stand-ups |
