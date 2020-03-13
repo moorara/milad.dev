@@ -16,7 +16,7 @@ So, I decided to compile a concise tutorial for `sed` that covers the most commo
 
 With `sed`, you usually specify a few _options_ and a _script_ and feed it with an input file.
 
-```bash
+```
 sed <options> <script> <input_file>
 ```
 
