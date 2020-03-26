@@ -1,5 +1,5 @@
 ---
-title: "Data Mesh?"
+title: "Data Mesh"
 date: 2020-03-24T16:00:00-04:00
 draft: true
 toc: false
