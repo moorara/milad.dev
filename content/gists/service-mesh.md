@@ -36,6 +36,7 @@ tags:
 
 ## Read More
 
+  - [Service Mesh Ultimate Guide](https://www.infoq.com/articles/service-mesh-ultimate-guide)
   - [What is a Service Mesh?](https://www.hashicorp.com/resources/what-is-a-service-mesh)
   - [Intro to Service Meshes: Data Planes, Control Planes, and More](https://www.youtube.com/watch?v=CM2Y6B1yuDg)
   - [You Have a Service Mesh, Now What?](https://www.youtube.com/watch?v=IFjai8KniSs)
