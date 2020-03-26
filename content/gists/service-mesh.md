@@ -8,7 +8,6 @@ tags:
   - container
   - kubernetes
   - networking
-  - mesh
   - service-mesh
   - istio
   - linkerd
