@@ -1,6 +1,6 @@
 ---
 title: "Stream Processing"
-date: 2020-03-15T20:00:00-04:00
+date: 2020-03-26T22:00:00-04:00
 draft: false
 toc: false
 tags:
@@ -40,17 +40,23 @@ tags:
     - We connect the actors and data streams.
   - A stream processor will take care of the hard work (_collecting data_, _running actors in the right order_, _collecting results_, _scaling_, and so on).
   - **Streaming SQL** allows users to write SQL-like statements to query streaming data.
-  - We can define **windows** for streams. A window is a _working memory_ on top of a stream.
-  - The most common types of streaming windows:
+  - A **window** is a _working memory_ on top of a stream. The most common types of streaming windows:
     - **Sliding Length Window** Keeps last N events and triggers for each new event.
     - **Batch Length Window** Keeps last N events and triggers once for every N event.
     - **Sliding Time Window** Keeps events triggered at last N time units and triggers for each new event.
     - **Batch Time Window** Keeps events triggered at last N time units and triggers once for the time period in the end.
+  - **Event Sourcing** is an architectural pattern built on top of stream processing.
+    - Changes to an application state are stored as a sequence of events.
+    - These events can be replayed and queried to reconstruct the state of the application at any time.
 
 ## Read More
 
   - [A Gentle Introduction to Stream Processing](https://medium.com/stream-processing/what-is-stream-processing-1eadfca11b97)
   - [Stream Processing 101: A Deep Look at Operators](https://medium.com/stream-processing/stream-processing-101-from-sql-to-streaming-sql-44d299cf38aa)
+  - [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)
+  - [Plumbing At Scale](https://engineering.grab.com/plumbing-at-scale)
+  - [Keystone Real-Time Stream Processing Platform](https://netflixtechblog.com/keystone-real-time-stream-processing-platform-a3ee651812a)
+  - [Event Sourcing, CQRS, Stream Processing and Apache Kafka](https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/)
   - [The Data Dichotomy: Rethinking the Way We Treat Data and Services](https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services)
   - [Build Services on a Backbone of Events](https://www.confluent.io/blog/build-services-backbone-events)
   - [Using Apache Kafka as a Scalable, Event-Driven Backbone for Service Architectures](https://www.confluent.io/blog/apache-kafka-for-service-architectures)
