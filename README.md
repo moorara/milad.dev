@@ -6,6 +6,13 @@ This is a [Hugo](https://gohugo.io) site for my personal tech and dev blog.
 
 ## Getting Started
 
+After cloning the repo, run the following commands to get the git submodules for themes:
+
+```
+git submodule init
+git submodule update
+```
+
 You can run Hugo server locally as follows:
 
 ```
