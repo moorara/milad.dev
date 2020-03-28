@@ -5,6 +5,11 @@ theme         = "hermit"
 enableGitInfo = true
 # enableEmoji = true
 
+# Taxonomies
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
 # Code Highlighting
 # pygmentsUseClassic = true
 # pygmentsCodefences = true
