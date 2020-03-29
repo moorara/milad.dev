@@ -90,3 +90,4 @@ tags:
   - [OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html)
   - [OpenID Connect Dynamic Client Registration 1.0](https://openid.net/specs/openid-connect-registration-1_0.html)
   - [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519)
+  - [JSON Web Key (JWK)](https://tools.ietf.org/html/rfc7517)
