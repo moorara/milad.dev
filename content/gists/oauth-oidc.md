@@ -84,6 +84,7 @@ tags:
 ## Read More
 
   - [OAuth 2.0 and OpenID Connect in Plain English](https://www.youtube.com/watch?v=996OiexHze0)
+  - [Securing APIs and Microservices with OAuth and OpenID Connect](https://www.youtube.com/watch?v=WyHem7pFWQM)
   - [An Illustrated Guide to OAuth and OpenID Connect](https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc)
   - [The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749)
   - [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)
