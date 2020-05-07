@@ -5,9 +5,16 @@ date: 2020-03-01T12:00:00-04:00
 
 ## Bio
 
-I am a software engineer passionate about distributed systems, cloud applications, DevOps, and automation.
-I strive for simplicity!
-Here I write about the tech stuff I am doing and interested in.
+I am a software engineer who strives for simplicity!
+I enjoy building meaningful and impactful things!
+I am passionate about building highly available, scalable, and autonomous systems.
+
+I am experienced in: 
+
+  - Distributed Systems
+  - Cloud Computing
+  - Automation
+  - Observability
 
 ## Manifesto
 
