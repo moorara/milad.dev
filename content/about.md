@@ -6,6 +6,7 @@ date: 2020-03-01T12:00:00-04:00
 ## Bio
 
 I am a software engineer who strives for simplicity!
+I enjoy building meaningful and impactful things!
 I am passionate about building highly available, scalable, and autonomous systems.
 
 I am experienced in: 
