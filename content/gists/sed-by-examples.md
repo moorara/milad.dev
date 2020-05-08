@@ -1,6 +1,6 @@
 ---
 title: "sed By Examples"
-date: 2020-03-11T14:00:00-04:00
+date: 2020-03-22T20:00:00-04:00
 draft: false
 toc: true
 tags:
@@ -9,10 +9,10 @@ tags:
   - sed
 ---
 
-`sed` is a _stream editor_ command available on all Unix-compatible systems.
+`sed` is a _stream editor_ command available on Unix-compatible systems.
 `sed` is quite a powerful tool, but the learning curve is also high comparing to other similar tools such as `grep` or `awk`.
 Almost every time I want to do something with `sed`, I need to look it up and search for some examples.
-So, I decided to compile a concise tutorial for `sed` that covers the most common useful use-cases.
+So, I decided to compile a concise tutorial for `sed` that covers the most common use-cases.
 
 With `sed`, you usually specify a few _options_ and a _script_ and feed it with an input file.
 
