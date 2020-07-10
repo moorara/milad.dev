@@ -1,7 +1,7 @@
 ---
 title: "What is an Ad Platform Made of?"
 date: 2020-07-06T15:00:00-04:00
-draft: true
+draft: false
 toc: true
 tags:
   - ad
