@@ -17,7 +17,7 @@ tags:
 ![Ads Marketplace](/images/ads-marketplace.png)
 
 Ad placement is a [multi-objective optimization](https://en.wikipedia.org/wiki/Multi-objective_optimization) (MOO) problem.
-There are many factors that needed to be taken into account and be optimized:
+Many factors needed to be taken into account and be optimized:
 
   - Relevancy
   - Advertiser Value
@@ -50,7 +50,7 @@ There are many factors that needed to be taken into account and be optimized:
 | **Promotion** | Promotions are one kind of marketing to encourage conversion. |
 | **Ads** | Advertising or Ads are another kind of marketing. |
 | **Surface** | A medium or place for showing ads. |
-| **Inventory** | The ad slots being offered to advertiser. |
+| **Inventory** | The ad slots being offered to advertisers. |
 | **Impression** | Impression is defined as the ad being in the viewport for a period of time. |
 | **Conversion** | An action that is valuable to business (i.e. purchase, call). |
 | **RTB** | Real-time bidding is the process of offering ad slots to advertisers through an online auction. |
@@ -105,13 +105,13 @@ It matches supply with demand in real-time by maximizing ROI for advertisers and
   - **Second-Price (Vickery) Auction**
     - Bidders submit sealed bids without knowing about others' bid.
     - The highest bidder wins but the price paid is the second-highest bid (plus 1 cent).
-    - This model incentivize bidders to bid their true value.
+    - This model incentivizes bidders to bid their true value.
 
 ### Ad Ranking/Pricing
 
   - When there are multiple ad slots available, we need to decide what ad appears in each slot.
     - We assign a rank no. (position) to each ad.
-  - This decision can be made based on variety of factors:
+  - This decision can be made based on a variety of factors:
     - Bid price
     - Ad relevancy (**Relevance Score**)
     - Ad quality (**Quality Score**)
@@ -133,7 +133,7 @@ It matches supply with demand in real-time by maximizing ROI for advertisers and
 
 ### Audience Targeting
 
-Advertisers can reach out to different _segments_ of users by specifying various targeting criteria:.
+Advertisers can reach out to different _segments_ of users by specifying various targeting criteria.
 Tagerting capabilities usually include the following:
 
   - Location Targeting
@@ -162,13 +162,13 @@ Tagerting capabilities usually include the following:
     - Naive: based on an arbitrary distribution (i.e. uniform distribution).
     - **Traffic-aware**: historical traffic distribution defines the ad delivery curve.
     - Custom: advertiser defines the goals.
-  - For pacing to work and staying on ad delivery curve, there are different approaches:
+  - For pacing to work and staying on the ad delivery curve, there are different approaches:
     - Greedy: spend the budget as fast as possible while the goal is not met.
-    - ε-Greedy: optimizes greedy approach by dropping an ad with probability ε.
+    - ε-Greedy: optimizes the greedy approach by dropping an ad with probability ε.
     - **Model-based**: _PID Controller_, _Model predictive control_, etc.
   - There are two approaches for tracking ongoing delivery and correcting it:
-    - Proactively (biased for underdelivery): assign quota up front and serve ad if it has not run out of quota.
-    - Reactively (biased for overdelivery): count delivery via events and throttle once threshold is met (goal is met).
+    - Proactively (biased for underdelivery): assign quota upfront and serve ad if it has not run out of quota.
+    - Reactively (biased for overdelivery): count delivery via events and throttle once the threshold is met (goal is met).
 
 ## User Tracking
 
