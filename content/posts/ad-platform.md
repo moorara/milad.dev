@@ -1,6 +1,6 @@
 ---
 title: "What is an Ad Platform Made of?"
-date: 2020-07-06T15:00:00-04:00
+date: 2020-07-14T16:00:00-04:00
 draft: false
 toc: true
 tags:
@@ -12,9 +12,10 @@ tags:
   - advertising
   - targeting
   - tracking
+  - pacing
 ---
 
-![Ads Marketplace](/images/ads-marketplace.png)
+<br/>![Ad Marketplace](/images/ad-marketplace.png)<br/>
 
 Ad placement is a [multi-objective optimization](https://en.wikipedia.org/wiki/Multi-objective_optimization) (MOO) problem.
 Many factors needed to be taken into account and be optimized:
@@ -169,6 +170,8 @@ Tagerting capabilities usually include the following:
   - There are two approaches for tracking ongoing delivery and correcting it:
     - Proactively (biased for underdelivery): assign quota upfront and serve ad if it has not run out of quota.
     - Reactively (biased for overdelivery): count delivery via events and throttle once the threshold is met (goal is met).
+
+<br/>![Ad Delivery Curve](/images/ad-delivery-curve.jpg)<br/>
 
 ## User Tracking
 
