@@ -18,7 +18,7 @@ tags:
 <br/>![Ad Marketplace](/images/ad-marketplace.png)<br/>
 
 Ad placement is a [multi-objective optimization](https://en.wikipedia.org/wiki/Multi-objective_optimization) (MOO) problem.
-Many factors needed to be taken into account and be optimized:
+There are many factors needed to be taken into account and be optimized:
 
   - Relevancy
   - Advertiser Value
