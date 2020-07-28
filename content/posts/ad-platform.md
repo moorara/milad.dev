@@ -138,7 +138,7 @@ Advertisers can reach out to different _segments_ of users by specifying various
 Tagerting capabilities usually include the following:
 
   - Location Targeting
-  - Demographic Targeting:
+  - Demographic Targeting
   - Behavioral Targeting
   - Contextual Targeting
   - Retargeting
