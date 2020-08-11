@@ -1,6 +1,6 @@
 ---
 title: "Security For Developers"
-date: 2020-03-12T20:00:00-04:00
+date: 2020-08-11T16:00:00-04:00
 draft: false
 toc: true
 tags:
@@ -89,23 +89,21 @@ Complex mechanisms can increase the _attack surface area_ and the security risk.
 Once a security vulnerability is found, it is important to develop tests for it and understand the _root cause_ of it properly.
 It is also very important to make sure that all instances of a given security issue is fixed across the entire application.
 
-## Common Security Vulnerabilities
+## Common Vulnerabilities and Attacks
 
-### Buffer Overflow
+### Denial of Service (DoS)
 
-Buffer overflow is a class of exploit in which a program writes some data to a buffer more than it can hold.
-A buffer is a continuous block of memory and when overflowed, the excessive data will be written into other parts of memory.
-The attacker can cause the program to crash or execute malicious code.
+The Denial of Service (DoS) attack is about exhausting a service to make it unavailable for other users.
+There are many ways to make a service unavailable for legitimate users.
+For example, if a service receives unexpectedly a large number of requests, it may become unavailable.
 
-Buffer overflow attacks come in different forms. **Stack-based** and **Heap-based** buffer overflows are the most well-known.
-C and C++ are more vulnerable to this exploit as they don't have any built-in protection against accessing or overwriting out-of-bound data in memory.
+A Distributed Denial of Service (DDoS) attack is a type of DoS attack that comes from many distributed sources such as botnets.
 
-You can read more about this vulnerability here:
+You can read more about this attack here:
 
-  - https://owasp.org/www-community/vulnerabilities/Buffer_Overflow
-  - https://www.cloudflare.com/learning/security/threats/buffer-overflow
-
-## Common Security Attacks
+  - https://owasp.org/www-community/attacks/Denial_of_Service
+  - https://www.cloudflare.com/learning/ddos/glossary/denial-of-service
+  - https://www.cloudflare.com/learning/ddos/what-is-a-ddos-botnet
 
 ### Query Injection
 
@@ -130,7 +128,7 @@ You can read more about this attack here:
 
 Cross-Site Scripting (XSS) attacks belong to _code injection_ category of attacks.
 
-  1. The attacker uses an _exploit_ in a trust web application and embed malicious code into it.
+  1. The attacker uses an _exploit_ in a trust web application and embeds malicious code into it.
   1. The victim runs the malicious code in her browser by visiting the trusted website.
   1. The malicious code steals sensitive information such as _cookies_ and send them to a destination controlled by the attacker.
 
@@ -156,14 +154,14 @@ You can read more about this attack here:
 Cross-Site Request Forgery (CSRF) works by tricking a user into invoking a request from a web application that the user is already authenticated with.
 This request is usually a **state-changing request** as opposed to stealing data.
 The attacker cannot see the response to the forged request.
-An example of this attack could be tricking a user into making a request from her bank's website to transfer some funds to the attacker with the help of some **social engineering**.
+An example of this attack could be tricking a user into requesting from her bank's website to transfer some funds to the attacker with the help of some **social engineering**.
 
 Here are the steps:
 
   1. The attacker forges a request.
   1. The attacker embeds the forged request on a website, email, etc.
   1. The victim unwittingly triggers the forged request.
-  1. The target web application receives the request and fulfill it as a legitimate request made by the authenticated user.
+  1. The target web application receives the request and fulfills it as a legitimate request made by the authenticated user.
 
 CSRF attacks are hard to be completely prevented due to their nature.
 Different HTTP verbs are handled differently by browsers, thus they have different levels of vulnerabilities to CSRF attacks.
@@ -173,6 +171,60 @@ You can read more about this attack and its mitigation solutions here:
 
   - https://owasp.org/www-community/attacks/csrf
   - https://www.cloudflare.com/learning/security/threats/cross-site-request-forgery
+
+## Other Vulnerabilities and Attacks
+
+### Buffer Overflow
+
+Buffer overflow is a class of exploit in which a program writes some data to a buffer more than it can hold.
+A buffer is a continuous block of memory and when overflowed, the excessive data will be written into other parts of memory.
+The attacker can cause the program to crash or execute malicious code.
+
+Buffer overflow attacks come in different forms. **Stack-based** and **Heap-based** buffer overflows are the most well-known.
+C and C++ are more vulnerable to this exploit as they don't have any built-in protection against accessing or overwriting out-of-bound data in memory.
+
+You can read more about this vulnerability here:
+
+  - https://owasp.org/www-community/vulnerabilities/Buffer_Overflow
+  - https://www.cloudflare.com/learning/security/threats/buffer-overflow
+
+### DNS Cache Poisoning
+
+DNS Cache Poisoning or DNS Spoofing is an attack in which false information will be placed in a DNS cache,
+so that DNS queries return incorrect responses and users will be directed to the wrong and possibly malicious websites.
+The incorrect DNS information will remain in the cache until time-to-live is expired or the cache is purged.
+This attack is possible because in original DNS protocol, there is no mechanism for verifying identities and establishing trust between parties.
+New mechanisms are suggested to fix this vulnerability (DNSSEC, DNS over HTTPS, DNS over TLS).
+
+You can read more about this attack here:
+
+  - https://owasp.org/www-community/attacks/Cache_Poisoning
+  - https://www.cloudflare.com/learning/dns/dns-cache-poisoning
+  - https://www.cloudflare.com/learning/dns/dns-security
+  - https://www.cloudflare.com/learning/dns/dns-over-tls
+
+### HTTP Request Smuggling
+
+HTTP Request Smuggling or HTTP Desync attack exploits different interpretations of a stream of non-standard HTTP requests
+between the attacker (client), HTTP proxies, caches, and the HTTP server itself.
+The attacker takes advantage of how a stream of HTTP requests can be interpreted differently at various HTTP layers.
+The attacker can smuggle a malicious HTTP request through an HTTP intermediary to the server.
+
+You can read more about this attack and its defenses here:
+
+  - https://portswigger.net/web-security/request-smuggling
+  - https://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges.pdf
+  - https://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges-wp.pdf
+
+### HTTP Response Splitting
+
+HTTP Response Splitting exploits a vulnerability in which user-defined data are sent to a web application from an untrusted source and
+the web application includes the malicious data in an HTTP response header without validating it for malicious characters (newline).
+
+You can read more about this attack here:
+
+  - https://owasp.org/www-community/attacks/HTTP_Response_Splitting
+  - https://blog.detectify.com/2019/06/14/http-response-splitting-exploitations-and-mitigations
 
 ## Read More
 
