@@ -33,6 +33,7 @@ These are all types supported currently:
   - `[]uint`, `[]uint8`, `[]uint16`, `[]uint32`, `[]uint64`
   - `time.Duration`, `[]time.Duration`
   - `url.URL`, `[]url.URL`
+  - `regexp.Regexp`, `[]regexp.Regexp`
 
 ## Getting Started
 
