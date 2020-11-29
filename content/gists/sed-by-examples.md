@@ -36,10 +36,23 @@ Here are some common _commands_ that you may use in `sed` scripts:
 
 | Command                 | Description                                              |
 |-------------------------|----------------------------------------------------------|
-| `g`                     | Global applies a command to every line of input.         |
+| `1`                     | Applies a command to only to the first occurrence.       |
+| `2`                     | Applies a command to only to the second occurrence.      |
+| `g`                     | Global applies a command to every occurrence.            |
+| `i`                     | Matches in a case-insensitive manner.                    |
 | `p`                     | Prints the matching patterns to standard output.         |
 | `d`                     | Deletes the matching patterns from output or input file. |
 | `s/regexp/replacement/` | Replaces a _regexp_ instance with the _replacement_.     |
+
+## Regular Expressions
+
+| Pattern | Description                       |
+|---------|-----------------------------------|
+| ^       | Matches the beginning of lines.   |
+| $       | Matches the end of lines.         |
+| .       | Matches any single character.     |
+| *       | Matches zero or more occurrences. |
+| []      | Matches a class of characters.    |
 
 ## Examples
 
