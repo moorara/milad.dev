@@ -31,6 +31,8 @@ We don't need a title to be leaders. Everyone should be a leader.
 **Values**
 
   - 💡 Integrity
+  - 💡 Ownership
+  - 💡 Collaboration
   - 💡 Humility
   - 💡 Listening
   - 💡 Empathy
