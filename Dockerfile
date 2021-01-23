@@ -1,5 +1,5 @@
 ## Helper Image
-FROM alpine:3.12 AS builder
+FROM alpine:3.13 AS builder
 RUN apk add --no-cache curl jq py-pygments
 
 # Install the latest release of Caddy
@@ -24,7 +24,7 @@ RUN hugo --gc --minify --baseURL "http://localhost:8080"
 
 
 ## Final Image
-FROM alpine:3.12
+FROM alpine:3.13
 RUN apk add --no-cache ca-certificates
 
 LABEL maintainer="Milad" \
