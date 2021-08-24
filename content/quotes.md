@@ -8,3 +8,7 @@ date: 2019-10-02T22:00:00-04:00
 > But it's worth it in the end because once you get there, you can move mountains.
 >
 > -Steve Jobs
+
+> Inventing and pioneering involves a willingness to be misunderstood for long periods of time.
+> 
+> -Jeff Bezos
