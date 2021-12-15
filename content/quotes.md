@@ -3,7 +3,7 @@ title: "Quotes"
 date: 2019-10-02T22:00:00-04:00
 ---
 
-> Be Kind! Evryone you meet is fighting a hard battle!
+> Be Kind! Everyone you meet is fighting a hard battle!
 >
 > -*Unknown*
 
