@@ -1,0 +1,81 @@
+baseURL: https://milad.dev
+languageCode: en-us
+title: milad.dev
+paginate: 5
+theme: PaperMod
+
+enableGitInfo: true
+enableEmoji: true
+
+enableRobotsTXT: true
+googleAnalytics: UA-141297099-1
+
+taxonomies:
+  tag: tags
+  category: categories
+
+params:
+  # Enable google analytics, opengraph, twitter-cards and schema
+  # env: production
+
+  author: Milad Irannejad
+  title: My Personal Website
+  description: Writing about cloud computing and distributed systems.
+  keywords:
+    - dev
+    - tech
+    - cloud
+    - milad
+
+  DateFormat: Jan 2, 2006
+  defaultTheme: dark
+  disableThemeToggle: false
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  disableAnchoredHeadings: true
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+  comments: false
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/moorara"
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier:
+      name: Gists
+      url: /gists/
+      weight: 20
+    - identifier:
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier:
+      name: Fav Books
+      url: /books/
+      weight: 40
+    - identifier:
+      name: Fav Reads
+      url: /reads
+      weight: 50
+    - identifier:
+      name: Fav Quotes
+      url: /quotes
+      weight: 60
+    - identifier:
+      name: About Me
+      url: /about
+      weight: 70

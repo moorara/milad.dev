@@ -1,15 +1,11 @@
 <!--
   If this pull request addresses an issue, make sure your description includes "Resolves #xx", "Fixes #xx", or "Closes #xx".
-  https://help.github.com/articles/closing-issues-using-keywords
-
-  If any checklist item is not applicable or relevant, replace it with [N/A].
+  See https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue
 -->
 
 ## Description
 
 ### Checklist
 
-#### General
-
-  - [ ] PR title is clear and describes the work
+  - [ ] PR title is clear and describes the change
   - [ ] Commit messages are self-explanatory and summarize the change
