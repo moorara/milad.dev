@@ -1,6 +1,7 @@
-# Hugo
+# Hugo files
 /public
 /resources
+.hugo_build.lock
 
-# OSX
+# Misc files
 .DS_Store

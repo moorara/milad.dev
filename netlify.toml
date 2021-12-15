@@ -1,9 +1,6 @@
-##
-## Ref:
-##   https://gohugo.io/hosting-and-deployment/hosting-on-netlify
-##   https://www.netlify.com/docs/netlify-toml-reference
-##   https://www.netlify.com/docs/build-settings
-##
+# https://gohugo.io/hosting-and-deployment/hosting-on-netlify
+# https://docs.netlify.com/configure-builds/file-based-configuration
+# https://docs.netlify.com/configure-builds/get-started
 
 [build]
 
@@ -21,21 +18,24 @@
   # functions = "functions"
 
 [context.production.environment]
-  HUGO_VERSION       = "0.74.3"
+  HUGO_VERSION       = "0.90.1"
   HUGO_ENV           = "production"
   HUGO_ENABLEGITINFO = "true"
+  HUGO_PARAMS_ENV    = "production" 
 
 # Deploy Preview context: all deploys resulting from a pull request will inherit these settings.
 [context.deploy-preview]
-  # publish = ""
   command = "hugo --gc --minify --buildFuture --baseURL $DEPLOY_PRIME_URL"
-  environment = { HUGO_VERSION = "0.74.3" }
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.90.1"
 
 # Branch Deploy context: all deploys that are not from a pull request or from the Production branch will inherit these settings.
 [context.branch-deploy]
-  # publish = ""
   command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
-  environment = { HUGO_VERSION = "0.74.3" }
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.90.1"
 
 # The following redirect is intended for use with most SPAs that handle routing internally.
 # [[redirects]]

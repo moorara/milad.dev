@@ -1,7 +1,9 @@
-version: "3.7"
+version: "3.9"
 services:
   webserver:
-    image: moorara/milad.dev:${VERSION:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
     hostname: webserver
     container_name: webserver
     restart: always

@@ -145,14 +145,14 @@ In this section, we briefly review some of the widely-used tools available for b
 Lex is a program for generating and creating _lexers_ and _scanners_.
 [Flex](https://github.com/westes/flex) (fast lexical analyzer generator) is an alternative to Lex.
 Flex takes an input file that defines all valid tokens (words) of a language and generates a lexer in C/C++.
-You can find an example of using Flex [here](https://github.com/moorara/compiler/tree/master/1-flex).
+You can find an example of using Flex [here](https://github.com/moorara/compiler/tree/main/1-flex).
 
 #### Yacc/Bison
 
 Yacc (Yet Another Compiler-Compiler) is a program for creating and generating LALR parsers ([Look-Ahead LR parser](https://en.wikipedia.org/wiki/LALR_parser)).
 [Bison](https://www.gnu.org/software/bison) is a version of Yacc. Yacc/Bison are used together with Lex/Flex.
 Bison reads a specification of a _context-free language_ written in _BNF_ and generates a parser in C/C++.
-You can find an example of using Bison [here](https://github.com/moorara/compiler/tree/master/2-bison).
+You can find an example of using Bison [here](https://github.com/moorara/compiler/tree/main/2-bison).
 
 #### LLVM
 
@@ -168,7 +168,7 @@ Now it is time for the fun part! We want to build a micro-compiler in Go.
 Our language is a logical formula of labels with _ANDs_ and _ORs_.
 For example, `((sport,soccer);(music,dance))` means we want all contents either related to _sport_ and _soccer_ or related to _music_ and _dance_.
 Our compiler is going to create a _SQL_ query for a given label formula.
-You can find the source code for this example [here](https://github.com/moorara/compiler/tree/master/goyacc)
+You can find the source code for this example [here](https://github.com/moorara/compiler/tree/main/goyacc)
 
 ### Defining The Language
 
