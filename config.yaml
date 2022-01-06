@@ -41,6 +41,8 @@ params:
   disableScrollToTop: false
   disableAnchoredHeadings: true
   ShowReadingTime: true
+  ShowToc: false
+  TocOpen: false
   ShowShareButtons: false
   ShowPostNavLinks: false
   ShowBreadCrumbs: true
@@ -48,8 +50,6 @@ params:
 
   hidemeta: false
   hideSummary: false
-  showtoc: false
-  tocopen: false
   comments: false
 
   homeInfoParams:
