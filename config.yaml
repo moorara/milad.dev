@@ -6,13 +6,18 @@ theme: PaperMod
 
 enableGitInfo: true
 enableEmoji: true
-
 enableRobotsTXT: true
 googleAnalytics: UA-141297099-1
 
 taxonomies:
   tag: tags
   category: categories
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON  # Required for search
 
 params:
   # Enable google analytics, opengraph, twitter-cards and schema
@@ -23,9 +28,11 @@ params:
   description: Writing about cloud computing and distributed systems.
   keywords:
     - dev
-    - tech
+    - golang
     - cloud
+    - tech
     - milad
+    - moorara
 
   DateFormat: Jan 2, 2006
   defaultTheme: dark
@@ -34,6 +41,8 @@ params:
   disableScrollToTop: false
   disableAnchoredHeadings: true
   ShowReadingTime: true
+  ShowToc: false
+  TocOpen: false
   ShowShareButtons: false
   ShowPostNavLinks: false
   ShowBreadCrumbs: true
@@ -41,41 +50,66 @@ params:
 
   hidemeta: false
   hideSummary: false
-  showtoc: false
-  tocopen: false
   comments: false
+
+  homeInfoParams:
+    Title: Milad Irannejad
+    Content: >
+      I am software engineer passionate about building highly available, scalable, and autonomous software platforms.
 
   socialIcons:
     - name: github
       url: "https://github.com/moorara"
 
+  # Fuse.js Basic options for search
+  # See https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    includeScore: true
+    includeMatches: true
+    shouldSort: true
+    minMatchCharLength: 2
+    location: 0
+    threshold: 0.4
+    distance: 100
+    keys: [ "title", "permalink", "summary", "content" ]
+
+  editPost:
+    URL: "https://github.com/moorara/milad.dev/tree/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
 menu:
   main:
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 10
     - identifier: posts
       name: Posts
       url: /posts/
-      weight: 10
+      weight: 20
     - identifier:
       name: Gists
       url: /gists/
-      weight: 20
+      weight: 30
     - identifier:
       name: Projects
       url: /projects/
-      weight: 30
+      weight: 40
     - identifier:
       name: Fav Books
       url: /books/
-      weight: 40
+      weight: 50
     - identifier:
       name: Fav Reads
       url: /reads
-      weight: 50
+      weight: 60
     - identifier:
       name: Fav Quotes
       url: /quotes
-      weight: 60
+      weight: 70
     - identifier:
       name: About Me
       url: /about
-      weight: 70
+      weight: 80
