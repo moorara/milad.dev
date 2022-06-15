@@ -12,6 +12,8 @@ date: 2020-03-01T14:00:00-04:00
     - [Bring your monorepo down to size with sparse-checkout](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout)
   - **Go**
     - https://abhinavg.net/posts/understanding-token-pos
+  - **AI/ML**
+    - [Machine learning has a backdoor problem](https://bdtechtalks.com/2022/05/23/machine-learning-undetectable-backdoors)
   - **Misc**
     - [Using the iPad Pro as my development machine](https://arslan.io/2019/01/07/using-the-ipad-pro-as-my-development-machine)
     - [Google Recruiters Say Using the 'X-Y-Z Formula' on Your Resume Will Improve Your Odds of Getting Hired at Google](https://www.inc.com/bill-murphy-jr/google-recruiters-say-these-5-resume-tips-including-x-y-z-formula-will-improve-your-odds-of-getting-hired-at-google.html)
