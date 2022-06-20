@@ -12,6 +12,8 @@ date: 2020-03-01T14:00:00-04:00
     - [Bring your monorepo down to size with sparse-checkout](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout)
   - **Go**
     - https://abhinavg.net/posts/understanding-token-pos
+  - **Kubernetes**
+    - [A Simple Kubernetes Admission Webhook](https://slack.engineering/simple-kubernetes-webhook)
   - **AI/ML**
     - [Machine learning has a backdoor problem](https://bdtechtalks.com/2022/05/23/machine-learning-undetectable-backdoors)
   - **Misc**
