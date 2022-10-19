@@ -4,6 +4,7 @@ date: 2020-03-01T14:00:00-04:00
 ---
 
   - **Coding**
+    - [conventional: comments](https://conventionalcomments.org) 
     - [Goodbye, Clean Code](https://overreacted.io/goodbye-clean-code)
   - **Source Code Management**
     - [Setting Up Git Identities](https://www.micah.soy/posts/setting-up-git-identities/)
