@@ -1,12 +1,12 @@
 ---
 title: "About Me"
-date: 2020-03-01T12:00:00-04:00
+date: 2023-12-15T12:22:30-05:00
 ---
 
 ## Bio
 
 I am a software engineer who strives for simplicity!
-I enjoy building meaningful and impactful things!
+I enjoy building lasting and impactful things!
 I am passionate about building highly available, scalable, and autonomous systems.
 
 I am experienced in: 
@@ -20,28 +20,28 @@ I am experienced in:
 
 My greatest qualities as an engineer are:
 
-  * How I treat other people
-  * How I work and collobarate as part of a team
+  - How I treat other people
+  - How I work and collobarate as part of a team
 
 We don't need a title to be leaders. Everyone should be a leader.
 
-  * Leaders eat last
-  * Leaders ask questions
+  - Leaders eat last
+  - Leaders ask questions
 
-**Values**
+### Values
 
+  - 💡 Empathy
+  - 💡 Listening
   - 💡 Integrity
   - 💡 Ownership
   - 💡 Collaboration
   - 💡 Humility
-  - 💡 Listening
-  - 💡 Empathy
-  - 💡 Helping
-  - 💡 Respect
   - 💡 Pragmatism
+  - 💡 Helping Others
 
-**Do's**
+### Do's
 
+  - ✅ Ask the right questions
   - ✅ Simplify and clean
   - ✅ Solve a problem every day
   - ✅ Work smart by automating
@@ -50,14 +50,12 @@ We don't need a title to be leaders. Everyone should be a leader.
   - ✅ Build just enough
   - ✅ Fix the root cause
   - ✅ Make lasting changes
-  - ✅ Ask the right questions
   - ✅ One step at a time
-  - ✅ Treat developers like customers
   - ✅ Make work fun!
 
-**Don'ts**
+### Don'ts
 
   - ❌ Over-engineering
   - ❌ Over-abstraction
   - ❌ Leaky abstractions
-  - ❌ Premature optimization
+  - ❌ Premature optimizations
