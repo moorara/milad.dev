@@ -1,5 +1,5 @@
 ## Helper Image
-FROM alpine:3.19 AS builder
+FROM alpine:3.20 AS builder
 RUN apk add --no-cache curl git jq py-pygments
 
 # Install the latest release of Caddy
@@ -23,7 +23,7 @@ RUN hugo --gc --minify --baseURL "http://localhost:8080"
 
 
 ## Final Image
-FROM alpine:3.19
+FROM alpine:3.20
 
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md
 LABEL org.opencontainers.image.source="https://github.com/moorara/milad.dev"
